@@ -26,7 +26,6 @@
 </template>
 
 <script>import api from '@/api';
-    import axios from 'axios';
     import NotePanel from './NotePanel.vue';
     import summaryPrompt from '@/prompts/summaryPrompt.txt';
 
@@ -221,7 +220,7 @@
 
                 try {
                     // Save game state to backend
-                    await axios.post('/api/game-state/save', gameState);
+                    await api.post('/game-state/save', gameState);
                     console.log('Game saved');
                     console.log(gameState);
 
@@ -231,7 +230,7 @@
             },
             async loadGameState(gameId) {
                 try {
-                    const response = await axios.get(`/api/game-state/load/${gameId}`);
+                    const response = await api.get(`/game-state/load/${gameId}`);
                     const gameState = response.data;
 
                     // Restore the game state
