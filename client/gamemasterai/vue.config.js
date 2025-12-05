@@ -7,9 +7,12 @@ module.exports = defineConfig({
         hot: false,
         liveReload: false,
         allowedHosts: 'all',
+        // Bind to 0.0.0.0 to allow LAN/mobile access
+        host: '0.0.0.0',
+        port: 8080,
         proxy: {
             '^/api': {
-                target: 'http://localhost:5000',
+                target: 'http://localhost:5001',
                 changeOrigin: true,
                 logLevel: 'debug',
                 pathRewrite: { '^/api': '/api' },

@@ -25,7 +25,8 @@
     </div>
 </template>
 
-<script>import axios from 'axios';
+<script>import api from '@/api';
+    import axios from 'axios';
     import NotePanel from './NotePanel.vue';
     import summaryPrompt from '@/prompts/summaryPrompt.txt';
 
@@ -96,7 +97,7 @@
 
                     const messagesToSend = [...lastSummaryMessages, summaryRequest];
 
-                    const response = await axios.post('http://localhost:5001/api/game-session/generate-summary', {
+                    const response = await api.post('/game-session/generate-summary', {
                         messages: messagesToSend,
                     });
 
@@ -149,7 +150,7 @@
                             this.incrementTokenCount(message.content);
                         });
 
-                        const response = await axios.post('http://localhost:5001/api/game-session/generate', {
+                        const response = await api.post('/game-session/generate', {
                             messages: lastMessages
                         });
                         const aiMessageContent = response.data;

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import api from '@/api';
 
 export default {
     data() {
@@ -27,7 +27,7 @@ export default {
     async created() {
         this.loading = true;
         try {
-            const response = await axios.get('/api/game-state/all');  // Updated to new API endpoint
+            const response = await api.get('/game-state/all');  // Using api instance
             this.games = response.data;
         } catch (error) {
             this.error = 'An error occurred while loading the games.';

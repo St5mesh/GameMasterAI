@@ -10,15 +10,19 @@ const app = express();
 const gameSessionRouter = require('./routes/gameSession');
 const gameStateRoutes = require('./routes/gameState'); 
 
-app.use(cors());
+// CORS configuration - allow requests from any origin for LAN access
+// In production, you should restrict this to specific origins
+const corsOptions = {
+    origin: process.env.CORS_ORIGIN || '*', // Allow all origins by default, or specify in .env
+    credentials: true,
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 // Placed after the routes you don't want it to affect
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use(cors({
-    origin: 'http://localhost:8080' // Or whatever you set in the "proxy" attribute in your Vue app's package.json
-}));
 
 app.use('/api/game-session', gameSessionRouter);
 app.use('/api/game-state', gameStateRoutes);
@@ -38,7 +42,8 @@ mongoose.connect(process.env.MONGODB_URI, {
 // });
 
 const PORT = process.env.PORT || 5001;
+const HOST = process.env.HOST || '0.0.0.0';
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(PORT, HOST, () => {
+    console.log(`Server is running on ${HOST}:${PORT}`);
 });
