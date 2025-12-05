@@ -13,7 +13,7 @@ async function generateResponse(prompt, options = {}) {
         temperature: 1.0,
     };
 
-    const requestOptions = Object.assign({}, defaultOptions, options);
+    const requestOptions = { ...defaultOptions, ...options };
 
     try {
         const headers = {

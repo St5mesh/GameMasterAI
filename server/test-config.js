@@ -23,7 +23,7 @@ console.log('  Campaign Model:', AI_MODEL_CAMPAIGN);
 console.log('  Summary Model:', AI_MODEL_SUMMARY);
 console.log();
 
-if (API_BASE_URL.includes('localhost') || API_BASE_URL.includes('127.0.0.1')) {
+if (process.env.LM_STUDIO_BASE_URL) {
     console.log('Mode: LM Studio (Local)');
     console.log('Expected: LM Studio server should be running at', API_BASE_URL);
     console.log('Note: API key is optional for LM Studio');
