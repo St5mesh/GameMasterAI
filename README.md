@@ -1,6 +1,6 @@
 # GameMaster.AI
 
-GameMaster.AI is a web-based application designed to deliver a single-player tabletop role-playing game (TTRPG) experience, guided by an AI Dungeon Master. Utilizing cutting-edge AI language models such as GPT-3.5-turbo and GPT-4, this platform offers a seamless integration of an AI Dungeon Master with an AI notetaker to craft an immersive narrative for games like Dungeons & Dragons.
+GameMaster.AI is a web-based application designed to deliver a single-player tabletop role-playing game (TTRPG) experience, guided by an AI Dungeon Master. Supporting both OpenAI models (GPT-3.5-turbo and GPT-4) and local models via LM Studio, this platform offers a seamless integration of an AI Dungeon Master with an AI notetaker to craft an immersive narrative for games like Dungeons & Dragons.
 
 The project originated from Cole Porter (Deck of DM Things on YouTube) and was supported by a dedicated Patreon community. When the project grew beyond the scope manageable by Cole, the decision was made to open-source GameMaster.AI and discontinue the Patreon.
 
@@ -8,6 +8,8 @@ The project originated from Cole Porter (Deck of DM Things on YouTube) and was s
 
 - [Prerequisites](#prerequisites)
 - [Setting up External Dependencies](#setting-up-external-dependencies)
+  - [Option 1: OpenAI API (Cloud-based)](#option-1-openai-api-cloud-based)
+  - [Option 2: LM Studio (Local Models)](#option-2-lm-studio-local-models)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -21,11 +23,50 @@ Required software and libraries are listed in the project’s `package.json` fil
 
 ## Setting up External Dependencies
 
+GameMaster.AI supports two AI provider options: **OpenAI API** (cloud-based) or **LM Studio** (local models). You only need to set up one of these options.
+
 ### .env File
 
-For proper functioning of the application, you must set up the following environment variables:
+Create a `.env` file in the root directory. You can copy `.env.example` as a starting template.
 
-#### MongoDB Atlas
+### AI Provider Configuration
+
+Choose one of the following options:
+
+#### Option 1: OpenAI API (Cloud-based)
+
+- **Purpose**: Use OpenAI's GPT models (GPT-4, GPT-3.5-turbo) for game content generation.
+- **Pros**: High-quality responses, reliable, no local resources needed.
+- **Cons**: Requires API key, costs per token used.
+- **Setup**:
+  1. Sign up for an account at [OpenAI](https://openai.com/).
+  2. Generate an API key in the API section.
+  3. In your `.env` file, add:
+     ```
+     AI_PROVIDER=openai
+     OPENAI_API_KEY=sk-your_api_key_here
+     ```
+
+#### Option 2: LM Studio (Local Models)
+
+- **Purpose**: Run AI models locally on your machine using LM Studio.
+- **Pros**: Free, private, no API costs, works offline.
+- **Cons**: Requires powerful hardware (GPU recommended), quality depends on model.
+- **Setup**:
+  1. Download and install [LM Studio](https://lmstudio.ai/).
+  2. Download a compatible chat model (recommended: Mistral 7B, Llama 2, or similar instruct/chat models).
+  3. In LM Studio, load your model and start the local server (default: http://localhost:1234).
+  4. In your `.env` file, add:
+     ```
+     AI_PROVIDER=lmstudio
+     LM_STUDIO_BASE_URL=http://localhost:1234/v1
+     LM_STUDIO_MODEL_DM=your-model-name
+     LM_STUDIO_MODEL_CAMPAIGN=your-model-name
+     LM_STUDIO_MODEL_SUMMARY=your-model-name
+     ```
+     Note: Replace `your-model-name` with the actual model identifier from LM Studio. You can use the same model for all three purposes or different models for each.
+
+### MongoDB Atlas
 
 - **Purpose**: Storing game save data and user accounts.
 - **Setup**:
@@ -34,39 +75,7 @@ For proper functioning of the application, you must set up the following environ
   3. Retrieve your connection string by navigating to the 'Connect' section of your cluster.
   4. In your `.env` file, add `MONGODB_URI=your_connection_string`.
 
-#### AI Configuration
-
-GameMaster.AI supports two options for AI integration:
-
-##### Option 1: OpenAI API (Cloud-based)
-
-- **Purpose**: Interacting with AI models for generating and managing game content using OpenAI's cloud service.
-- **Setup**:
-  1. Sign up for an account at [OpenAI](https://openai.com/).
-  2. Generate an API key in the API section.
-  3. In your `.env` file, add `OPENAI_API_KEY=your_api_key`.
-  4. Do NOT set `LM_STUDIO_BASE_URL` (leave it commented out or remove it).
-
-##### Option 2: LM Studio (Local AI)
-
-- **Purpose**: Run AI models locally on your machine using LM Studio for privacy and offline use.
-- **Setup**:
-  1. Download and install [LM Studio](https://lmstudio.ai/).
-  2. Download a compatible model (e.g., Llama 2, Mistral, or similar chat models).
-  3. Start the LM Studio server (typically runs on `http://localhost:1234`).
-  4. In your `.env` file, add:
-     - `LM_STUDIO_BASE_URL=http://localhost:1234/v1`
-     - `OPENAI_API_KEY` can be left empty or removed (LM Studio doesn't require an API key).
-  5. Configure model names (check the exact model name in LM Studio):
-     - `AI_MODEL_DM=your-model-name` (for the main game master)
-     - `AI_MODEL_CAMPAIGN=your-model-name` (for campaign generation)
-     - `AI_MODEL_SUMMARY=your-model-name` (for note-taking)
-  6. Ensure your chosen model supports chat completions (most modern models do).
-
-**Note**: LM Studio models often have different names than OpenAI models. Check your loaded model's exact name in LM Studio and use that in your configuration.
-
-
-#### SESSION_SECRET and JWT_SECRET
+### SESSION_SECRET and JWT_SECRET
 
 These are cryptographic keys used for securing sessions and token-based authentication respectively. Despite local deployment, it's crucial to use unique and random strings to prevent potential security breaches.
 
