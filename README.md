@@ -34,13 +34,31 @@ For proper functioning of the application, you must set up the following environ
   3. Retrieve your connection string by navigating to the 'Connect' section of your cluster.
   4. In your `.env` file, add `MONGODB_URI=your_connection_string`.
 
-#### OpenAI API
+#### AI Configuration
 
-- **Purpose**: Interacting with AI models for generating and managing game content.
+GameMaster.AI supports two options for AI integration:
+
+##### Option 1: OpenAI API (Cloud-based)
+
+- **Purpose**: Interacting with AI models for generating and managing game content using OpenAI's cloud service.
 - **Setup**:
   1. Sign up for an account at [OpenAI](https://openai.com/).
   2. Generate an API key in the API section.
   3. In your `.env` file, add `OPENAI_API_KEY=your_api_key`.
+  4. Do NOT set `LM_STUDIO_BASE_URL` (leave it commented out or remove it).
+
+##### Option 2: LM Studio (Local AI)
+
+- **Purpose**: Run AI models locally on your machine using LM Studio for privacy and offline use.
+- **Setup**:
+  1. Download and install [LM Studio](https://lmstudio.ai/).
+  2. Download a compatible model (e.g., Llama 2, Mistral, or similar chat models).
+  3. Start the LM Studio server (typically runs on `http://localhost:1234`).
+  4. In your `.env` file, add:
+     - `LM_STUDIO_BASE_URL=http://localhost:1234/v1`
+     - `OPENAI_API_KEY` can be left empty or removed (LM Studio doesn't require an API key).
+  5. Ensure your chosen model supports chat completions (most modern models do).
+
 
 #### SESSION_SECRET and JWT_SECRET
 

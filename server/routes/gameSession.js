@@ -4,6 +4,10 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
+// Configure API base URL - defaults to OpenAI but can be overridden for LM Studio
+const API_BASE_URL = process.env.LM_STUDIO_BASE_URL || 'https://api.openai.com/v1';
+const API_KEY = process.env.OPENAI_API_KEY || '';
+
 // Route to generate AI Dungeon Master and campaign generating responses
 router.post('/generate', async (req, res) => {
     // Extract the messages from the request body  
@@ -12,18 +16,24 @@ router.post('/generate', async (req, res) => {
     console.log('AI DM Processing the following messages');
     console.log(messages);
 
-    // Make a POST request to the OpenAI API for the AI DM
+    // Make a POST request to the API for the AI DM
     try {
-        const response = await axios.post('https://api.openai.com/v1/chat/completions', {
+        const headers = {
+            'Content-Type': 'application/json'
+        };
+        
+        // Only add Authorization header if API key is provided
+        if (API_KEY) {
+            headers['Authorization'] = `Bearer ${API_KEY}`;
+        }
+
+        const response = await axios.post(`${API_BASE_URL}/chat/completions`, {
             model: 'gpt-4',
             messages: messages,
             max_tokens: 300,
             temperature: 0.8
         }, {
-            headers: {
-                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
-                'Content-Type': 'application/json'
-            }
+            headers: headers
         });
 
         // Extract the AI's message from the response   
@@ -48,18 +58,24 @@ router.post('/generate-campaign', async (req, res) => {
     console.log('Prepper is Processing the following messages');
     console.log(messages);
 
-    // Make a POST request to the OpenAI API for the AI DM
+    // Make a POST request to the API for the AI DM
     try {
-        const response = await axios.post('https://api.openai.com/v1/chat/completions', {
+        const headers = {
+            'Content-Type': 'application/json'
+        };
+        
+        // Only add Authorization header if API key is provided
+        if (API_KEY) {
+            headers['Authorization'] = `Bearer ${API_KEY}`;
+        }
+
+        const response = await axios.post(`${API_BASE_URL}/chat/completions`, {
             model: 'gpt-3.5-turbo',
             messages: messages,
             max_tokens: 400,
             temperature: 0.8
         }, {
-            headers: {
-                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
-                'Content-Type': 'application/json'
-            }
+            headers: headers
         });
 
         // Extract the AI's message from the response  
@@ -83,16 +99,22 @@ router.post('/generate-summary', async (req, res) => {
         //console.log(messages);
 
         // Make a POST request to the Notetaker AI API
-        const response = await axios.post('https://api.openai.com/v1/chat/completions', {
+        const headers = {
+            'Content-Type': 'application/json'
+        };
+        
+        // Only add Authorization header if API key is provided
+        if (API_KEY) {
+            headers['Authorization'] = `Bearer ${API_KEY}`;
+        }
+
+        const response = await axios.post(`${API_BASE_URL}/chat/completions`, {
             model: 'gpt-3.5-turbo',
             messages: messages,
             max_tokens: 150,
             temperature: 0.8
         }, {
-            headers: {
-                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
-                'Content-Type': 'application/json'
-            }
+            headers: headers
         });
 
         // Extract the AI's message from the response  

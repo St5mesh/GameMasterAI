@@ -2,11 +2,22 @@ require('dotenv').config();
 
 const axios = require('axios');
 
+// Configure API base URL - defaults to OpenAI but can be overridden for LM Studio
+const API_BASE_URL = process.env.LM_STUDIO_BASE_URL || 'https://api.openai.com/v1';
+const API_KEY = process.env.OPENAI_API_KEY || '';
+
 async function testAI() {
-    const openaiApiKey = process.env.OPENAI_API_KEY;
+    const headers = {
+        'Content-Type': 'application/json'
+    };
+    
+    // Only add Authorization header if API key is provided
+    if (API_KEY) {
+        headers['Authorization'] = `Bearer ${API_KEY}`;
+    }
 
     const response = await axios.post(
-        'https://api.openai.com/v1/chat/completions',
+        `${API_BASE_URL}/chat/completions`,
         {
             model: 'gpt-3.5-turbo',
             messages: [
@@ -21,10 +32,7 @@ async function testAI() {
             temperature: 1,
         },
         {
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${openaiApiKey}`,
-            },
+            headers: headers
         }
     );
 
