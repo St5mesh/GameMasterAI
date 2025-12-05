@@ -3,10 +3,11 @@ const axios = require('axios');
 // Configure API base URL - defaults to OpenAI but can be overridden for LM Studio
 const API_BASE_URL = process.env.LM_STUDIO_BASE_URL || 'https://api.openai.com/v1';
 const API_KEY = process.env.OPENAI_API_KEY || '';
+const DEFAULT_MODEL = process.env.AI_MODEL_DEFAULT || 'gpt-3.5-turbo';
 
 async function generateResponse(prompt, options = {}) {
     const defaultOptions = {
-        model: 'gpt-3.5-turbo',
+        model: DEFAULT_MODEL,
         messages: [{ role: 'user', content: prompt }],
         max_tokens: 100,
         temperature: 1.0,

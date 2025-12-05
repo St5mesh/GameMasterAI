@@ -57,7 +57,13 @@ GameMaster.AI supports two options for AI integration:
   4. In your `.env` file, add:
      - `LM_STUDIO_BASE_URL=http://localhost:1234/v1`
      - `OPENAI_API_KEY` can be left empty or removed (LM Studio doesn't require an API key).
-  5. Ensure your chosen model supports chat completions (most modern models do).
+  5. Configure model names (check the exact model name in LM Studio):
+     - `AI_MODEL_DM=your-model-name` (for the main game master)
+     - `AI_MODEL_CAMPAIGN=your-model-name` (for campaign generation)
+     - `AI_MODEL_SUMMARY=your-model-name` (for note-taking)
+  6. Ensure your chosen model supports chat completions (most modern models do).
+
+**Note**: LM Studio models often have different names than OpenAI models. Check your loaded model's exact name in LM Studio and use that in your configuration.
 
 
 #### SESSION_SECRET and JWT_SECRET
