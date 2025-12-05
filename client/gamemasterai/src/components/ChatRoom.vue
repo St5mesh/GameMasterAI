@@ -25,7 +25,7 @@
     </div>
 </template>
 
-<script>import axios from 'axios';
+<script>import api from '@/api';
     import NotePanel from './NotePanel.vue';
     import summaryPrompt from '@/prompts/summaryPrompt.txt';
 
@@ -96,7 +96,7 @@
 
                     const messagesToSend = [...lastSummaryMessages, summaryRequest];
 
-                    const response = await axios.post('http://localhost:5001/api/game-session/generate-summary', {
+                    const response = await api.post('/game-session/generate-summary', {
                         messages: messagesToSend,
                     });
 
@@ -149,7 +149,7 @@
                             this.incrementTokenCount(message.content);
                         });
 
-                        const response = await axios.post('http://localhost:5001/api/game-session/generate', {
+                        const response = await api.post('/game-session/generate', {
                             messages: lastMessages
                         });
                         const aiMessageContent = response.data;
@@ -220,7 +220,7 @@
 
                 try {
                     // Save game state to backend
-                    await axios.post('/api/game-state/save', gameState);
+                    await api.post('/game-state/save', gameState);
                     console.log('Game saved');
                     console.log(gameState);
 
@@ -230,7 +230,7 @@
             },
             async loadGameState(gameId) {
                 try {
-                    const response = await axios.get(`/api/game-state/load/${gameId}`);
+                    const response = await api.get(`/game-state/load/${gameId}`);
                     const gameState = response.data;
 
                     // Restore the game state

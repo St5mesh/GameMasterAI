@@ -4,7 +4,7 @@ import { createStore } from "vuex";
 
 const storedUser = localStorage.getItem("user");
 const parsedUser = storedUser && storedUser !== "undefined" ? JSON.parse(storedUser) : null;
-import axios from 'axios';
+import api from './api';
 
 export default createStore({
     state: {
@@ -66,7 +66,7 @@ export default createStore({
         },
         async fetchCredits({ commit, state }) {
             try {
-                const response = await axios.get('/api/credits/user/credits', {
+                const response = await api.get('/credits/user/credits', {
                     headers: {
                         Authorization: `Bearer ${state.authToken}`,
                     },

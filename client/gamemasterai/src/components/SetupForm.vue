@@ -52,7 +52,7 @@
 </template>
 
 <script>
-    import axios from 'axios';
+    import api from '@/api';
 
 
     export default {
@@ -84,7 +84,7 @@
         const prompt = "Write a brief, 2 sentence adventure prompt for a new D&D adventure. Use the following to inform this:" + this.adventureSettingPrompts[this.formData.adventureSetting].default + 'Player Character name: ' + this.formData.characterName + ', Player Charactre Class: ' + this.formData.characterClass + ', Player Character Race: ' + this.formData.characterRace + ', Player Character Starting Level:' + this.formData.characterLevel + '. Player Character Background: ' + this.formData.characterBackground;
 
         try {
-            const response = await axios.post('http://localhost:5001/api/game-session/generate-campaign', {
+            const response = await api.post('/game-session/generate-campaign', {
                 messages: [{ role: "user", content: prompt }],
             });
 

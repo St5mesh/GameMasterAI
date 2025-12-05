@@ -95,6 +95,64 @@ To start GameMasterAI:
 
 You will be greeted with a user interface displaying the GameMasterAI logo and options to start a new game or load an existing one. First time users should follow the new game route to setup and then play.
 
+### Accessing from Mobile Devices (LAN Access)
+
+GameMasterAI now supports access from mobile devices on your local network! Here's how to set it up:
+
+#### Server Configuration
+
+The server is configured by default to accept connections from any device on your local network. If you need to customize this:
+
+1. In your `.env` file, you can configure:
+   ```
+   HOST=0.0.0.0              # Listen on all network interfaces
+   PORT=5001                  # Server port
+   CORS_ORIGIN=*              # Allow requests from any origin
+   ```
+
+2. If you want to restrict access to specific devices, you can set `CORS_ORIGIN` to specific IPs:
+   ```
+   CORS_ORIGIN=http://192.168.1.100:8080,http://192.168.1.101:8080
+   ```
+
+#### Development Server (Frontend)
+
+The Vue development server is also configured to accept LAN connections by default. It binds to `0.0.0.0:8080`.
+
+#### Accessing from Mobile
+
+1. Find your computer's local IP address:
+   - **Windows**: Open Command Prompt and run `ipconfig`. Look for "IPv4 Address" under your active network adapter.
+   - **Mac/Linux**: Open Terminal and run `ifconfig` or `ip addr`. Look for your local IP (usually starts with 192.168.x.x or 10.x.x.x).
+
+2. Start GameMasterAI with `npm start`.
+
+3. On your mobile device, open a web browser and navigate to:
+   ```
+   http://YOUR_LOCAL_IP:8080
+   ```
+   For example: `http://192.168.1.100:8080`
+
+4. The mobile browser will automatically connect to the API server at `http://YOUR_LOCAL_IP:5001`.
+
+#### Troubleshooting Mobile Access
+
+If you can see the UI but get "Failed to send message" errors:
+
+- **Firewall**: Ensure your firewall allows incoming connections on ports 5001 and 8080:
+  - **Windows**: Add inbound rules for ports 5001 and 8080 in Windows Defender Firewall
+  - **Mac**: System Preferences > Security & Privacy > Firewall > Firewall Options > Allow incoming connections for Node
+  - **Linux**: `sudo ufw allow 5001` and `sudo ufw allow 8080`
+
+- **LM Studio**: If using LM Studio, ensure it's also bound to `0.0.0.0` (not just localhost) so the server can access it:
+  - In LM Studio settings, look for the server configuration
+  - Change the binding from `127.0.0.1` to `0.0.0.0` if available
+  - Restart the LM Studio server
+
+- **Network**: Ensure both your computer and mobile device are on the same network (same WiFi network).
+
+- **Browser Console**: Open the browser's developer tools on your mobile device to see detailed error messages.
+
 ## Contributing
 
 Your contributions are welcome! Whether it's bug reporting, code improvement, feature proposal, or project maintenance, your help is invaluable.

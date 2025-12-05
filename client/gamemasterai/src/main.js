@@ -3,10 +3,12 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import axios from 'axios';
+import api from './api';
 
 const app = createApp(App);
 
-axios.defaults.baseURL = 'http://localhost:5001'; // Set the baseURL
+// Use the same base URL as the api instance for consistency
+axios.defaults.baseURL = api.defaults.baseURL;
 
 // Add request interceptor
 axios.interceptors.request.use(
