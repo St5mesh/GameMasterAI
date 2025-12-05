@@ -4,6 +4,15 @@ const express = require('express');
 const router = express.Router();
 const { generateDMResponse, generateCampaign, generateSummary, getProviderInfo } = require('../ai-provider');
 
+// Configure API base URL - defaults to OpenAI but can be overridden for LM Studio
+const API_BASE_URL = process.env.LM_STUDIO_BASE_URL || 'https://api.openai.com/v1';
+const API_KEY = process.env.OPENAI_API_KEY || '';
+
+// Configure model names - allows using different models for LM Studio vs OpenAI
+const AI_MODEL_DM = process.env.AI_MODEL_DM || 'gpt-4';
+const AI_MODEL_CAMPAIGN = process.env.AI_MODEL_CAMPAIGN || 'gpt-3.5-turbo';
+const AI_MODEL_SUMMARY = process.env.AI_MODEL_SUMMARY || 'gpt-3.5-turbo';
+
 // Route to generate AI Dungeon Master and campaign generating responses
 router.post('/generate', async (req, res) => {
     // Extract the messages from the request body  
