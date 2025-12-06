@@ -104,7 +104,7 @@ async function generateAIResponse(messages, options = {}) {
 async function generateDMResponse(messages) {
     return generateAIResponse(messages, {
         modelType: 'dm',
-        max_tokens: 300,
+        max_tokens: 500,  // Reduced for concise, player-focused responses
         temperature: 0.8
     });
 }
@@ -115,7 +115,7 @@ async function generateDMResponse(messages) {
 async function generateCampaign(messages) {
     return generateAIResponse(messages, {
         modelType: 'campaign',
-        max_tokens: 400,
+        max_tokens: 1500,
         temperature: 0.8
     });
 }
@@ -126,7 +126,7 @@ async function generateCampaign(messages) {
 async function generateSummary(messages) {
     return generateAIResponse(messages, {
         modelType: 'summary',
-        max_tokens: 150,
+        max_tokens: 800,
         temperature: 0.8
     });
 }

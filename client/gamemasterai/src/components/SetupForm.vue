@@ -41,6 +41,10 @@
             <input id="character-background" v-model="formData.characterBackground" type="text">
         </div>
         <div>
+            <label for="ability-scores">Ability Scores (STR DEX CON INT WIS CHA):</label>
+            <input id="ability-scores" v-model="formData.abilityScores" type="text" placeholder="e.g., 10 14 12 8 16 10">
+        </div>
+        <div>
             <label for="or">OR:</label>
         </div>
         <div>
@@ -73,7 +77,8 @@
                     characterClass: '',
                     characterRace: '',
                     characterLevel: '',
-                    characterBackground: ''
+                    characterBackground: '',
+                    abilityScores: ''
                 }
             };
         },
@@ -81,7 +86,12 @@
 
         async generateCampaignConcept() {
         // Generate the campaign concept using the OpenAI API.
-        const prompt = "Write a brief, 2 sentence adventure prompt for a new D&D adventure. Use the following to inform this:" + this.adventureSettingPrompts[this.formData.adventureSetting].default + 'Player Character name: ' + this.formData.characterName + ', Player Charactre Class: ' + this.formData.characterClass + ', Player Character Race: ' + this.formData.characterRace + ', Player Character Starting Level:' + this.formData.characterLevel + '. Player Character Background: ' + this.formData.characterBackground;
+        if (!this.formData.adventureSetting || !this.adventureSettingPrompts[this.formData.adventureSetting]) {
+            console.error('Adventure setting not selected');
+            return 'You arrive in a mysterious land where adventure awaits at every turn.';
+        }
+        
+        const prompt = "Write a brief, 2 sentence adventure prompt for a new D&D adventure. Use the following to inform this:" + this.adventureSettingPrompts[this.formData.adventureSetting] + 'Player Character name: ' + this.formData.characterName + ', Player Charactre Class: ' + this.formData.characterClass + ', Player Character Race: ' + this.formData.characterRace + ', Player Character Starting Level:' + this.formData.characterLevel + '. Player Character Background: ' + this.formData.characterBackground;
 
         try {
             const response = await api.post('/game-session/generate-campaign', {
@@ -107,13 +117,27 @@
             } else {
                 // Generate the campaign concept as before
                 const campaignConcept = await this.generateCampaignConcept();
-                systemMessageContentDM = this.gameSystemPrompts[this.formData.gameSystem].default + campaignConcept + 'Assume the player knows nothing. Allow for an organic introduction of information.';
+                
+                // Parse ability scores to calculate modifiers
+                let characterStats = '';
+                if (this.formData.abilityScores && this.formData.abilityScores.trim()) {
+                    const scores = this.formData.abilityScores.trim().split(/\s+/);
+                    if (scores.length === 6) {
+                        const [str, dex, con, int, wis, cha] = scores.map(Number);
+                        const calcMod = (score) => Math.floor((score - 10) / 2);
+                        characterStats = `\n\nCHARACTER STATS (for internal use - apply modifiers to all rolls):\nSTR ${str} (${calcMod(str) >= 0 ? '+' : ''}${calcMod(str)}), DEX ${dex} (${calcMod(dex) >= 0 ? '+' : ''}${calcMod(dex)}), CON ${con} (${calcMod(con) >= 0 ? '+' : ''}${calcMod(con)}), INT ${int} (${calcMod(int) >= 0 ? '+' : ''}${calcMod(int)}), WIS ${wis} (${calcMod(wis) >= 0 ? '+' : ''}${calcMod(wis)}), CHA ${cha} (${calcMod(cha) >= 0 ? '+' : ''}${calcMod(cha)})`;
+                    }
+                }
+                
+                systemMessageContentDM = this.gameSystemPrompts[this.formData.gameSystem] + campaignConcept + characterStats + '\n\nAssume the player knows nothing. Allow for an organic introduction of information.';
             }
 
             // Set the system message content DM
             this.$store.commit('setSystemMessageContentDM', systemMessageContentDM);
+            console.log('SetupForm: Set systemMessageContentDM in store:', systemMessageContentDM.substring(0, 100) + '...');
 
             const gameId = this.$store.state.gameId;
+            console.log('SetupForm: Navigating to ChatRoom with gameId:', gameId);
             this.$router.push({ name: 'ChatRoom', params: { id: gameId } });
         }
     }

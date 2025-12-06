@@ -62,11 +62,8 @@ router.get('/all', async (req, res) => {
         // Find all game states
         const gameStates = await GameState.find({});
         
-        if (!gameStates || gameStates.length === 0) {
-            return res.status(404).json({ error: 'No game states found' });
-        }
-
-        res.json(gameStates);
+        // Return empty array if no games exist instead of 404
+        res.json(gameStates || []);
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Failed to load game states' });

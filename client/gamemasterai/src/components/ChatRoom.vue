@@ -51,25 +51,86 @@
 
             };
         },
-        created() {
-            console.log('this.$route.params.id:', this.$route.params.id); // This should log the gameId or undefined
+        async created() {
+            console.log('ChatRoom created, gameId:', this.$route.params.id);
 
             // check if a gameId is provided in the route
             if (this.$route.params.id) {
-                // Load the existing game
-                this.loadGameState(this.$route.params.id);
-                this.systemMessageContentDM = this.$store.state.systemMessageContentDM;
-                const systemMessageDM = {
-                    role: 'system',
-                    content: this.systemMessageContentDM,
-                };
-
-                // Push the system message to the conversation
-                this.conversation.push(systemMessageDM);
+                // Try to load existing game state
+                const loaded = await this.loadGameState(this.$route.params.id);
+                
+                // If after loading, conversation is still empty, this is a new game
+                if (!loaded || this.conversation.length === 0) {
+                    console.log('New game detected, initializing...');
+                    this.initializeNewGame();
+                }
+            }
+        },
+        
+        async mounted() {
+            // Double-check in mounted if we need to initialize
+            if (this.conversation.length === 0 && this.$store.state.systemMessageContentDM) {
+                this.initializeNewGame();
             }
         },
 
         methods: {
+            
+            initializeNewGame() {
+                console.log('Initializing new game...');
+                console.log('Store systemMessageContentDM:', this.$store.state.systemMessageContentDM);
+                this.systemMessageContentDM = this.$store.state.systemMessageContentDM;
+                if (this.systemMessageContentDM) {
+                    const systemMessageDM = {
+                        role: 'system',
+                        content: this.systemMessageContentDM,
+                    };
+                    this.conversation.push(systemMessageDM);
+                    console.log('System message added, requesting opening scene...');
+                    
+                    // Request opening scene asynchronously
+                    this.requestOpeningScene();
+                } else {
+                    console.error('No system message content found in store!');
+                }
+            },
+            
+            async requestOpeningScene() {
+                try {
+                    console.log('Requesting opening scene...');
+                    // Send initial prompt to get the opening scene
+                    const openingPrompt = {
+                        role: 'user',
+                        content: 'Begin the adventure by setting the scene. Describe where I am and what is happening. Keep it brief and engaging.'
+                    };
+                    
+                    this.conversation.push(openingPrompt);
+                    
+                    const response = await api.post('/game-session/generate', {
+                        messages: this.conversation
+                    });
+                    
+                    const aiMessageContent = response.data;
+                    console.log('Opening scene received:', aiMessageContent);
+                    
+                    const aiMessage = {
+                        role: 'assistant',
+                        content: aiMessageContent,
+                    };
+                    
+                    this.conversation.push(aiMessage);
+                    this.summaryConversation.push(aiMessage);
+                    this.messages.push({ user: "GameMaster.AI", text: aiMessageContent });
+                    
+                    this.incrementTokenCount(aiMessageContent);
+                    this.userAndAssistantMessageCount++; // Count the opening exchange
+                    await this.saveGameState();
+                    
+                } catch (error) {
+                    console.error('Error requesting opening scene:', error);
+                    this.errorMessage = "Failed to generate opening scene. Please refresh the page.";
+                }
+            },
 
             incrementTokenCount(message) {
                 const tokenCountForMessage = Math.ceil(message.length / 4);
@@ -89,12 +150,13 @@
                         this.incrementTokenCount(message.content);
                     });
 
+                    // System prompt should come FIRST, then the conversation to summarize
                     const summaryRequest = {
                         role: 'system',
                         content: this.summaryPrompt,
                     };
 
-                    const messagesToSend = [...lastSummaryMessages, summaryRequest];
+                    const messagesToSend = [summaryRequest, ...lastSummaryMessages];
 
                     const response = await api.post('/game-session/generate-summary', {
                         messages: messagesToSend,
@@ -230,6 +292,7 @@
             },
             async loadGameState(gameId) {
                 try {
+                    console.log('Loading game state for:', gameId);
                     const response = await api.get(`/game-state/load/${gameId}`);
                     const gameState = response.data;
 
@@ -252,9 +315,13 @@
                             user: role === 'assistant' ? 'GameMaster.AI' : role.charAt(0).toUpperCase() + role.slice(1),
                             text: content,
                         }));
+                    
+                    console.log('Game state loaded successfully, conversation length:', this.conversation.length);
+                    return true; // Successfully loaded
 
                 } catch (error) {
-                    console.error('Error loading game state:', error);
+                    // This is expected for new games - no saved state exists yet
+                    return false; // No saved game exists
                 }
             }
 
