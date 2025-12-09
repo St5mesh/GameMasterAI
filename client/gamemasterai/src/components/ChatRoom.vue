@@ -237,11 +237,11 @@
                             this.userAndAssistantMessageCount++;
                             console.log('User and assistant message count:');
                             console.log(this.userAndAssistantMessageCount);
-                            // Call saveGameState after each message
-                            this.saveGameState();
                         }
 
-                        if (this.userAndAssistantMessageCount % this.ContextLength === 0) {
+                        // Check for summary trigger AFTER incrementing
+                        if (this.userAndAssistantMessageCount % this.ContextLength === 0 && this.userAndAssistantMessageCount > 0) {
+                            console.log('Triggering summary generation...');
                             await this.updateSummary();
 
                             const reminderMessage = {
@@ -250,6 +250,9 @@
                             };
                             this.conversation.push(reminderMessage);
                         }
+                        
+                        // Save game state after each exchange
+                        await this.saveGameState();
                     } catch (error) {
                         console.error('Error generating AI message:', error);
                         this.errorMessage = "Failed to send message. Please try again."; // Set the error message
