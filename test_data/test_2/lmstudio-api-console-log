@@ -1,0 +1,288 @@
+ [LM STUDIO SERVER] Success! HTTP server listening on port 1234
+2025-12-08 13:48:33  [WARN]
+ [LM STUDIO SERVER] Server accepting connections from the local network. Only use this if you know what you are doing!
+2025-12-08 13:48:33  [INFO]
+2025-12-08 13:48:33  [INFO]
+ [LM STUDIO SERVER] Supported endpoints:
+2025-12-08 13:48:33  [INFO]
+ [LM STUDIO SERVER] ->	GET  http://10.50.10.14:1234/v1/models
+2025-12-08 13:48:33  [INFO]
+ [LM STUDIO SERVER] ->	POST http://10.50.10.14:1234/v1/responses
+2025-12-08 13:48:33  [INFO]
+ [LM STUDIO SERVER] ->	POST http://10.50.10.14:1234/v1/chat/completions
+2025-12-08 13:48:33  [INFO]
+ [LM STUDIO SERVER] ->	POST http://10.50.10.14:1234/v1/completions
+2025-12-08 13:48:33  [INFO]
+ [LM STUDIO SERVER] ->	POST http://10.50.10.14:1234/v1/embeddings
+2025-12-08 13:48:33  [INFO]
+2025-12-08 13:48:33  [INFO]
+ [LM STUDIO SERVER] Logs are saved into /home/st5ubu/.lmstudio/server-logs
+2025-12-08 13:48:33  [INFO]
+ Server started.
+2025-12-08 13:48:33  [INFO]
+ Just-in-time model loading active.
+2025-12-08 13:48:35  [INFO]
+ [Plugin(lmstudio/js-code-sandbox)] stdout: [Tools Prvdr.] Register with LM Studio
+2025-12-08 13:48:35  [INFO]
+ [Plugin(lmstudio/rag-v1)] stdout: [PromptPreprocessor] Register with LM Studio
+2025-12-08 13:50:09  [INFO]
+ [qwen/qwen3-vl-8b] Running chat completion on conversation with 1 messages.
+2025-12-08 13:50:09  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 0.0%
+2025-12-08 13:50:09  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 100.0%
+2025-12-08 13:50:11  [INFO]
+ [qwen/qwen3-vl-8b] Model generated tool calls:  []
+2025-12-08 13:50:11  [INFO]
+ [qwen/qwen3-vl-8b] Generated prediction:  {
+  "id": "chatcmpl-a6qcsme7p0ffivajo1rwhj",
+  "object": "chat.completion",
+  "created": 1765201809,
+  "model": "qwen/qwen3-vl-8b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a collapsing bakery vault while trying to sneak past a grumpy gnome guard — now he’s trapped inside a giant, sentient gingerbread man’s stomach with a ticking clock and a cursed cookie recipe that could turn the whole town into sentient pastries.  \n*“BEHOLD! I vanish!”* he yells as the gingerbread man’s teeth begin to close… and Snick’s only hope is to out-acrobatic the dessert dragon before he becomes dessert himself.",
+        "reasoning_content": "",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 176,
+    "completion_tokens": 113,
+    "total_tokens": 289
+  },
+  "stats": {},
+  "system_fingerprint": "qwen/qwen3-vl-8b"
+}
+2025-12-08 13:50:11  [INFO]
+ [qwen/qwen3-vl-8b] Running chat completion on conversation with 2 messages.
+2025-12-08 13:50:11  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 0.0%
+2025-12-08 13:50:11  [INFO]
+ [qwen/qwen3-vl-8b] Running chat completion on conversation with 4 messages.
+2025-12-08 13:50:11  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 100.0%
+2025-12-08 13:50:17  [INFO]
+ [qwen/qwen3-vl-8b] Model generated tool calls:  []
+2025-12-08 13:50:17  [INFO]
+ [qwen/qwen3-vl-8b] Generated prediction:  {
+  "id": "chatcmpl-jmhbmaj3ycfu3fqbx6sb4e",
+  "object": "chat.completion",
+  "created": 1765201811,
+  "model": "qwen/qwen3-vl-8b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "You’re inside the belly of a giant, sentient gingerbread man — not the kind you’d find in a cookie jar, but one tall enough to swallow a bakery whole. The walls are warm, cinnamon-scented, and lined with sugary ribs that creak like old floorboards. Above you, a giant jaw is slowly closing — teeth like chocolate-chip molar teeth glinting in the dim, candied light. \n\nA ticking clock hangs from the ceiling — not your average clock, but a crooked, caramelized pendulum that says “3 MINUTES UNTIL THE RECIPE AWAKENS.” \n\nAnd you? You’re Snick Underbough — “Stealth Wizard,” though your stealth just got a lot less stealthy. \n\nYou’re holding a half-eaten cookie — the cursed one — and the moment you took a bite, the gingerbread man’s stomach began to rumble. Not with hunger. With *intent*. \n\nThe dragon? He’s not real — yet. But he’s coming. \n\nAnd you’re the only one who can stop him — or become the next batch of cinnamon rolls.\n\n*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. \n\nTime to move. \n\n**Roll for DEX to dodge the first jaw snap.**",
+        "reasoning_content": "",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 225,
+    "completion_tokens": 278,
+    "total_tokens": 503
+  },
+  "stats": {},
+  "system_fingerprint": "qwen/qwen3-vl-8b"
+}
+2025-12-08 13:50:17  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 0.0%
+2025-12-08 13:50:17  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 100.0%
+2025-12-08 13:50:23  [INFO]
+ [qwen/qwen3-vl-8b] Model generated tool calls:  []
+2025-12-08 13:50:23  [INFO]
+ [qwen/qwen3-vl-8b] Generated prediction:  {
+  "id": "chatcmpl-6gt6zsire64c4bxqfc6x8",
+  "object": "chat.completion",
+  "created": 1765201811,
+  "model": "qwen/qwen3-vl-8b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "You’re not in the bakery anymore.\n\nYou’re inside a giant, sentient gingerbread man’s stomach — warm, sticky, and smelling of cinnamon and existential dread. The walls pulse like dough rising under a hot oven, and the ceiling? That’s the inside of a mouth. Teeth are closing in — big, caramelized, and *very* hungry. A ticking clock glints on a shelf made of chocolate bars, counting down to… well, you’re not sure what. But the air smells like burnt sugar and impending doom.\n\nAnd the recipe? It’s written in icing on the wall — cursed, glowing, and whispering: *“Mix the madness. Bake the mayhem. Eat the end.”*\n\nYou’re Snick Underbough, Stealth Wizard. You’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n\n*“BEHOLD! I vanish!”* you yell, dodging a tongue-shaped tentacle. The clock ticks. The teeth close. You’re not dead yet — but you’re not sure for how long.\n\nWhat do you do?",
+        "reasoning_content": "",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 252,
+    "total_tokens": 688
+  },
+  "stats": {},
+  "system_fingerprint": "qwen/qwen3-vl-8b"
+}
+2025-12-08 13:51:10  [INFO]
+ [qwen/qwen3-vl-8b] Running chat completion on conversation with 6 messages.
+2025-12-08 13:51:10  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 0.0%
+2025-12-08 13:51:10  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 53.0%
+2025-12-08 13:51:10  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 100.0%
+2025-12-08 13:51:20  [INFO]
+ [qwen/qwen3-vl-8b] Model generated tool calls:  []
+2025-12-08 13:51:20  [INFO]
+ [qwen/qwen3-vl-8b] Generated prediction:  {
+  "id": "chatcmpl-8o9fp3t78dxz2jt0q9ahtd",
+  "object": "chat.completion",
+  "created": 1765201870,
+  "model": "qwen/qwen3-vl-8b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "You’re not alone in this sugary nightmare — here’s what’s *actually* around you (and maybe useful):\n\n---\n\n**1. Half-Eaten Cursed Cookie (in your hand)**  \n- *It’s glowing faintly, like a bad idea with a heartbeat.*  \n- If you eat it… the gingerbread man’s stomach might *react*. Or worse — you might become sentient pastry.  \n- If you *don’t* eat it… the recipe on the wall might react to *your* presence — or not.  \n- *Roll a CON save to resist its temptation.* (You’re not hungry… yet.)\n\n---\n\n**2. Clock with a Caramelized Pendulum**  \n- *It’s ticking — not just time, but “recipe countdown.”*  \n- If you can *stop* it, maybe the curse doesn’t trigger.  \n- It’s also *made of sugar*, so maybe… *burn it?*  \n- *Roll a DEX to dodge the pendulum’s swing — it’s not just a clock, it’s a weapon.*\n\n---\n\n**3. Chocolate Bar Shelf (on the ceiling)**  \n- *It’s not just chocolate — it’s a shelf made of chocolate bars.*  \n- If you can *climb* it… maybe you can reach the gingerbread man’s throat?  \n- *Roll a STR to climb — it’s sticky, but you’re a Stealth Wizard, so you’ve got a plan.*  \n- *If you fall… you might become a chocolate bar.*\n\n---\n\n**4. Glowing Icing Recipe on the Wall**  \n- *It’s written in cursive that looks like it’s been chewed.*  \n- It says: *“Mix the madness. Bake the mayhem. Eat the end.”*  \n- If you read it… maybe it reveals a way to stop the curse.  \n- *Roll an INT to decipher it — or maybe it’s just a warning.*  \n- *If you write on it… it might react — or it might be the key.*\n\n---\n\n**5. Tentacle Tongue (from the gingerbread man’s mouth)**  \n- *It’s not real — yet.*  \n- It’s *coming* — and it’s *hungry.*  \n- *Roll a DEX to dodge — or maybe you can *use* it?*  \n- *If you touch it… you might become sentient.*  \n- *",
+        "reasoning_content": "",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 500,
+    "total_tokens": 1297
+  },
+  "stats": {},
+  "system_fingerprint": "qwen/qwen3-vl-8b"
+}
+2025-12-08 13:51:20  [INFO]
+ [qwen/qwen3-vl-8b] Running chat completion on conversation with 5 messages.
+2025-12-08 13:51:20  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 0.0%
+2025-12-08 13:51:20  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 43.4%
+2025-12-08 13:51:21  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 87.1%
+2025-12-08 13:51:21  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 100.0%
+2025-12-08 13:51:35  [INFO]
+ [qwen/qwen3-vl-8b] Model generated tool calls:  []
+2025-12-08 13:51:35  [INFO]
+ [qwen/qwen3-vl-8b] Generated prediction:  {
+  "id": "chatcmpl-ovxlauxbtusf8i7lgjmxsu",
+  "object": "chat.completion",
+  "created": 1765201880,
+  "model": "qwen/qwen3-vl-8b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "If you don’t… you might become a snack.*\n\n---\n\n**6. Cinnamon Roll (on the floor)**  \n- *It’s not cursed — but it’s *very* tempting.*  \n- If you eat it… you might become a cinnamon roll.  \n- *Roll a WIS to resist — or maybe you’re just hungry.*  \n- *If you don’t… you might become a cinnamon roll anyway.*\n\n---\n\n**7. Gingerbread Man’s Teeth (in the ceiling)**  \n- *They’re closing — and they’re *very* sharp.*  \n- If you can *avoid* them… maybe you can *out-acrobatic* the dragon.  \n- *Roll a DEX to dodge — or maybe you can *use* them?*  \n- *If you touch them… you might become a tooth.*\n\n---\n\n**8. The Gingerbread Man’s Stomach (you’re inside it)**  \n- *It’s warm — and it’s *very* sticky.*  \n- If you can *escape*… maybe you can *out-acrobatic* the dragon.  \n- *Roll a DEX to escape — or maybe you can *use* it?*  \n- *If you don’t… you might become a snack.*\n\n---\n\n**9. The Dragon (not real — yet)**  \n- *It’s coming — and it’s *very* hungry.*  \n- If you can *out-acrobatic* it… maybe you can *stop* the curse.  \n- *Roll a DEX to dodge — or maybe you can *use* it?*  \n- *If you don’t… you might become a snack.*\n\n---\n\n**10. The Recipe (on the wall)**  \n- *It’s not just a recipe — it’s a *cursed* recipe.*  \n- If you can *read* it… maybe you can *stop* the curse.  \n- *Roll an INT to decipher it — or maybe it’s just a warning.*  \n- *If you write on it… it might react — or it might be the key.*\n\n---\n\n**What do you do?**\n\n*Roll a DEX to dodge the tentacle tongue — or maybe you can *use* it?*  \n*Roll a STR to climb the chocolate bar shelf — or maybe you can *use* it?*  \n*Roll a WIS to resist the cinnamon roll — or maybe you’re just hungry?*  \n*Roll a CON to resist the cursed cookie — or maybe you’re just… not hungry?*  \n*Roll an INT to decipher the recipe — or maybe it’s just a warning?*  \n*Roll a DEX to escape the gingerbread man’s stomach — or maybe you can *use* it?*\n\nYou’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n\n*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. \n\nTime to move.",
+        "reasoning_content": "",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1175,
+    "completion_tokens": 643,
+    "total_tokens": 1818
+  },
+  "stats": {},
+  "system_fingerprint": "qwen/qwen3-vl-8b"
+}
+2025-12-08 13:52:14  [INFO]
+ [qwen/qwen3-vl-8b] Running chat completion on conversation with 6 messages.
+2025-12-08 13:52:14  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 0.0%
+2025-12-08 13:52:14  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 26.3%
+2025-12-08 13:52:14  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 52.7%
+2025-12-08 13:52:14  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 79.1%
+2025-12-08 13:52:15  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 100.0%
+2025-12-08 13:52:22  [INFO]
+ [qwen/qwen3-vl-8b] Model generated tool calls:  []
+2025-12-08 13:52:22  [INFO]
+ [qwen/qwen3-vl-8b] Generated prediction:  {
+  "id": "chatcmpl-6wrkevx0mf4hhi819sc7yr",
+  "object": "chat.completion",
+  "created": 1765201934,
+  "model": "qwen/qwen3-vl-8b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "🎲 **Dexterity Roll: 18 (Natural 20!)** 🎲\n\nYou’re not just dodging — you’re *flipping* the gingerbread man’s jaw shut with a cartwheel that looks like it was choreographed by a circus acrobat who moonlighted as a pastry chef.\n\nThe teeth snap shut — *but not on you*. You’ve rolled under the first bite. You land in a sugar-coated crouch, arms out like a contortionist, breathing in cinnamon and chaos.\n\nThe clock ticks faster. The tongue licks the air. The recipe glows brighter.\n\nYou’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n\n**What do you do next?**\n\nYou’ve got:\n- A half-eaten cursed cookie (you’re holding it, still glowing).\n- A clock ticking down (3 minutes? 2?).\n- A chocolate shelf above you (climb it?).\n- A glowing recipe on the wall (read it?).\n- A tongue coming for you (dodge it? use it?).\n\nYou’re not dead. You’re not safe. You’re just… here.\n\nAnd the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n\n*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. \n\nTime to move.\n\n**Roll again? Or pick your next move?**",
+        "reasoning_content": "",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1940,
+    "completion_tokens": 337,
+    "total_tokens": 2277
+  },
+  "stats": {},
+  "system_fingerprint": "qwen/qwen3-vl-8b"
+}
+2025-12-08 13:52:54  [INFO]
+ [qwen/qwen3-vl-8b] Running chat completion on conversation with 6 messages.
+2025-12-08 13:52:55  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 0.0%
+2025-12-08 13:52:55  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 17.0%
+2025-12-08 13:52:55  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 74.9%
+2025-12-08 13:52:55  [INFO]
+ [qwen/qwen3-vl-8b] Prompt processing progress: 100.0%
+2025-12-08 13:53:06  [INFO]
+ [qwen/qwen3-vl-8b] Model generated tool calls:  []
+2025-12-08 13:53:06  [INFO]
+ [qwen/qwen3-vl-8b] Generated prediction:  {
+  "id": "chatcmpl-5geutgba9phppahwqvmmcs",
+  "object": "chat.completion",
+  "created": 1765201974,
+  "model": "qwen/qwen3-vl-8b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "*“BEHOLD! I vanish!”* you shout — not in fear, but in defiance — and you *do* vanish… for a second.  \nThen you reappear *inside* the gingerbread man’s mouth, mid-leap — arms flailing, cookie in hand, and a grin on your face that says: *“I’m not just sneaking — I’m *attacking*.”*\n\n---\n\n**You’re not attacking the gingerbread man — you’re attacking the *dragon* that’s about to come.**\n\nThe dragon? It’s not real — yet. But you *know* it’s coming. And you’re not waiting for it to eat you.\n\nSo you *do* what any Stealth Wizard would do:  \n**You use the environment.**\n\n---\n\n### 🎯 **You throw the cursed cookie at the clock’s caramelized pendulum.**\n\nIt’s not just a clock — it’s a *weapon*. And you’re using it to *break* the countdown.\n\nThe cookie hits the pendulum — *CRUNCH*.  \nThe pendulum *stops*.  \nThe clock *freezes*.  \nThe recipe on the wall *glows brighter*.  \nAnd the gingerbread man’s stomach *stutters* — like it’s confused.\n\n---\n\n### ⚡ *Now you’re not dodging — you’re *attacking*.*\n\nYou *grab* the chocolate bar shelf — not to climb, but to *swing*.  \nYou spin like a sugar-sick acrobat, using the shelf as a trampoline, launching yourself *toward the dragon’s mouth* — which is *not* real, but *is* about to open.\n\nYou land *inside* the dragon’s throat — not to eat it, but to *stop it*.\n\n---\n\n### 💥 *You shove the glowing recipe into the dragon’s mouth.*\n\nIt doesn’t *eat* it — it *reads* it.  \nThe dragon’s eyes flicker — not with hunger, but with *recognition*.  \nThe recipe says: *“Mix the madness. Bake the mayhem. Eat the end.”*\n\nThe dragon *understands*.  \nIt’s not attacking you — it’s *waiting* for you to finish the recipe.\n\n---\n\n### 🧩 *You whisper the final line into the dragon’s mouth:*\n\n> *“I’m not here to eat. I’m here to *stop*.”*\n\nThe dragon’s",
+        "reasoning_content": "",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1758,
+    "completion_tokens": 493,
+    "total_tokens": 2251
+  },
+  "stats": {},
+  "system_fingerprint": "qwen/qwen3-vl-8b"
+}

@@ -1,0 +1,248 @@
+router.js:45 Is authenticated: false
+router.js:45 Is authenticated: false
+VM757 runtime-core.esm-bundler.js:290 ChatRoom created, gameId: 1765201651303
+VM757 runtime-core.esm-bundler.js:290 Loading game state for: 1765201651303
+VM757 runtime-core.esm-bundler.js:290  GET http://localhost:5001/api/game-state/load/1765201651303 404 (Not Found)
+dispatchXhrRequest @ xhr.js:233
+xhr @ xhr.js:57
+dispatchRequest @ dispatchRequest.js:53
+request @ Axios.js:138
+Axios.<computed> @ Axios.js:160
+wrap @ bind.js:9
+loadGameState @ index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:264
+created @ index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:46
+callWithErrorHandling @ VM757 runtime-core.esm-bundler.js:290
+callWithAsyncErrorHandling @ VM757 runtime-core.esm-bundler.js:298
+callHook @ VM757 runtime-core.esm-bundler.js:3610
+applyOptions @ VM757 runtime-core.esm-bundler.js:3523
+finishComponentSetup @ VM757 runtime-core.esm-bundler.js:7223
+setupStatefulComponent @ VM757 runtime-core.esm-bundler.js:7133
+setupComponent @ VM757 runtime-core.esm-bundler.js:7065
+mountComponent @ VM757 runtime-core.esm-bundler.js:5432
+processComponent @ VM757 runtime-core.esm-bundler.js:5408
+patch @ VM757 runtime-core.esm-bundler.js:5021
+componentUpdateFn @ VM757 runtime-core.esm-bundler.js:5620
+run @ VM758 reactivity.esm-bundler.js:225
+instance.update @ VM757 runtime-core.esm-bundler.js:5655
+callWithErrorHandling @ VM757 runtime-core.esm-bundler.js:290
+flushJobs @ VM757 runtime-core.esm-bundler.js:507
+Promise.then
+queueFlush @ VM757 runtime-core.esm-bundler.js:406
+queuePostFlushCb @ VM757 runtime-core.esm-bundler.js:426
+queueEffectWithSuspense @ VM757 runtime-core.esm-bundler.js:1711
+scheduler @ VM757 runtime-core.esm-bundler.js:1914
+triggerEffect @ VM758 reactivity.esm-bundler.js:435
+triggerEffects @ VM758 reactivity.esm-bundler.js:423
+triggerRefValue @ VM758 reactivity.esm-bundler.js:1013
+eval @ VM758 reactivity.esm-bundler.js:1144
+triggerEffect @ VM758 reactivity.esm-bundler.js:435
+triggerEffects @ VM758 reactivity.esm-bundler.js:418
+triggerRefValue @ VM758 reactivity.esm-bundler.js:1013
+eval @ VM758 reactivity.esm-bundler.js:1144
+triggerEffect @ VM758 reactivity.esm-bundler.js:435
+triggerEffects @ VM758 reactivity.esm-bundler.js:418
+triggerRefValue @ VM758 reactivity.esm-bundler.js:1013
+set value @ VM758 reactivity.esm-bundler.js:1055
+finalizeNavigation @ vue-router.esm-bundler.js:3010
+eval @ vue-router.esm-bundler.js:3068
+Promise.then
+eval @ vue-router.esm-bundler.js:3067
+eval @ vue-router.esm-bundler.js:436
+popStateHandler @ vue-router.esm-bundler.js:435
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:50 New game detected, initializing...
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:63 Initializing new game...
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:64 Store systemMessageContentDM: 
+VM757 runtime-core.esm-bundler.js:290 No system message content found in store!
+initializeNewGame @ index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:77
+created @ index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:51
+await in created
+callWithErrorHandling @ VM757 runtime-core.esm-bundler.js:290
+callWithAsyncErrorHandling @ VM757 runtime-core.esm-bundler.js:298
+callHook @ VM757 runtime-core.esm-bundler.js:3610
+applyOptions @ VM757 runtime-core.esm-bundler.js:3523
+finishComponentSetup @ VM757 runtime-core.esm-bundler.js:7223
+setupStatefulComponent @ VM757 runtime-core.esm-bundler.js:7133
+setupComponent @ VM757 runtime-core.esm-bundler.js:7065
+mountComponent @ VM757 runtime-core.esm-bundler.js:5432
+processComponent @ VM757 runtime-core.esm-bundler.js:5408
+patch @ VM757 runtime-core.esm-bundler.js:5021
+componentUpdateFn @ VM757 runtime-core.esm-bundler.js:5620
+run @ VM758 reactivity.esm-bundler.js:225
+instance.update @ VM757 runtime-core.esm-bundler.js:5655
+callWithErrorHandling @ VM757 runtime-core.esm-bundler.js:290
+flushJobs @ VM757 runtime-core.esm-bundler.js:507
+Promise.then
+queueFlush @ VM757 runtime-core.esm-bundler.js:406
+queuePostFlushCb @ VM757 runtime-core.esm-bundler.js:426
+queueEffectWithSuspense @ VM757 runtime-core.esm-bundler.js:1711
+scheduler @ VM757 runtime-core.esm-bundler.js:1914
+triggerEffect @ VM758 reactivity.esm-bundler.js:435
+triggerEffects @ VM758 reactivity.esm-bundler.js:423
+triggerRefValue @ VM758 reactivity.esm-bundler.js:1013
+eval @ VM758 reactivity.esm-bundler.js:1144
+triggerEffect @ VM758 reactivity.esm-bundler.js:435
+triggerEffects @ VM758 reactivity.esm-bundler.js:418
+triggerRefValue @ VM758 reactivity.esm-bundler.js:1013
+eval @ VM758 reactivity.esm-bundler.js:1144
+triggerEffect @ VM758 reactivity.esm-bundler.js:435
+triggerEffects @ VM758 reactivity.esm-bundler.js:418
+triggerRefValue @ VM758 reactivity.esm-bundler.js:1013
+set value @ VM758 reactivity.esm-bundler.js:1055
+finalizeNavigation @ vue-router.esm-bundler.js:3010
+eval @ vue-router.esm-bundler.js:3068
+Promise.then
+eval @ vue-router.esm-bundler.js:3067
+eval @ vue-router.esm-bundler.js:436
+popStateHandler @ vue-router.esm-bundler.js:435
+router.js:45 Is authenticated: false
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/SetupForm.vue?vue&type=script&lang=js:76 SetupForm: Set systemMessageContentDM in store: [object Module]Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a colla...
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/SetupForm.vue?vue&type=script&lang=js:78 SetupForm: Navigating to ChatRoom with gameId: 1765201809403
+router.js:45 Is authenticated: false
+VM757 runtime-core.esm-bundler.js:290 ChatRoom created, gameId: 1765201809403
+VM757 runtime-core.esm-bundler.js:290 Loading game state for: 1765201809403
+VM757 runtime-core.esm-bundler.js:2814 Initializing new game...
+VM757 runtime-core.esm-bundler.js:2814 Store systemMessageContentDM: [object Module]Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a collapsing bakery vault while trying to sneak past a grumpy gnome guard — now he’s trapped inside a giant, sentient gingerbread man’s stomach with a ticking clock and a cursed cookie recipe that could turn the whole town into sentient pastries.  
+*“BEHOLD! I vanish!”* he yells as the gingerbread man’s teeth begin to close… and Snick’s only hope is to out-acrobatic the dessert dragon before he becomes dessert himself.
+
+CHARACTER STATS (for internal use - apply modifiers to all rolls):
+STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)
+
+Assume the player knows nothing. Allow for an organic introduction of information.
+VM757 runtime-core.esm-bundler.js:2814 System message added, requesting opening scene...
+VM757 runtime-core.esm-bundler.js:2814 Requesting opening scene...
+VM757 runtime-core.esm-bundler.js:290  GET http://localhost:5001/api/game-state/load/1765201809403 404 (Not Found)
+dispatchXhrRequest @ xhr.js:233
+xhr @ xhr.js:57
+dispatchRequest @ dispatchRequest.js:53
+request @ Axios.js:138
+Axios.<computed> @ Axios.js:160
+wrap @ bind.js:9
+loadGameState @ index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:264
+created @ index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:46
+callWithErrorHandling @ VM757 runtime-core.esm-bundler.js:290
+callWithAsyncErrorHandling @ VM757 runtime-core.esm-bundler.js:298
+callHook @ VM757 runtime-core.esm-bundler.js:3610
+applyOptions @ VM757 runtime-core.esm-bundler.js:3523
+finishComponentSetup @ VM757 runtime-core.esm-bundler.js:7223
+setupStatefulComponent @ VM757 runtime-core.esm-bundler.js:7133
+setupComponent @ VM757 runtime-core.esm-bundler.js:7065
+mountComponent @ VM757 runtime-core.esm-bundler.js:5432
+processComponent @ VM757 runtime-core.esm-bundler.js:5408
+patch @ VM757 runtime-core.esm-bundler.js:5021
+componentUpdateFn @ VM757 runtime-core.esm-bundler.js:5620
+run @ VM758 reactivity.esm-bundler.js:225
+instance.update @ VM757 runtime-core.esm-bundler.js:5655
+callWithErrorHandling @ VM757 runtime-core.esm-bundler.js:290
+flushJobs @ VM757 runtime-core.esm-bundler.js:507
+Promise.then
+queueFlush @ VM757 runtime-core.esm-bundler.js:406
+queuePostFlushCb @ VM757 runtime-core.esm-bundler.js:426
+queueEffectWithSuspense @ VM757 runtime-core.esm-bundler.js:1711
+scheduler @ VM757 runtime-core.esm-bundler.js:1914
+triggerEffect @ VM758 reactivity.esm-bundler.js:435
+triggerEffects @ VM758 reactivity.esm-bundler.js:423
+triggerRefValue @ VM758 reactivity.esm-bundler.js:1013
+eval @ VM758 reactivity.esm-bundler.js:1144
+triggerEffect @ VM758 reactivity.esm-bundler.js:435
+triggerEffects @ VM758 reactivity.esm-bundler.js:418
+triggerRefValue @ VM758 reactivity.esm-bundler.js:1013
+eval @ VM758 reactivity.esm-bundler.js:1144
+triggerEffect @ VM758 reactivity.esm-bundler.js:435
+triggerEffects @ VM758 reactivity.esm-bundler.js:418
+triggerRefValue @ VM758 reactivity.esm-bundler.js:1013
+set value @ VM758 reactivity.esm-bundler.js:1055
+finalizeNavigation @ vue-router.esm-bundler.js:3010
+eval @ vue-router.esm-bundler.js:2897
+Promise.then
+pushWithRedirect @ vue-router.esm-bundler.js:2870
+push @ vue-router.esm-bundler.js:2797
+submitForm @ index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/SetupForm.vue?vue&type=script&lang=js:79
+await in submitForm
+eval @ index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/SetupForm.vue?vue&type=template&id=1d65d461:62
+eval @ VM760 runtime-dom.esm-bundler.js:1632
+callWithErrorHandling @ VM757 runtime-core.esm-bundler.js:290
+callWithAsyncErrorHandling @ VM757 runtime-core.esm-bundler.js:298
+invoker @ VM760 runtime-dom.esm-bundler.js:473
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:50 New game detected, initializing...
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:63 Initializing new game...
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:64 Store systemMessageContentDM: [object Module]Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a collapsing bakery vault while trying to sneak past a grumpy gnome guard — now he’s trapped inside a giant, sentient gingerbread man’s stomach with a ticking clock and a cursed cookie recipe that could turn the whole town into sentient pastries.  
+*“BEHOLD! I vanish!”* he yells as the gingerbread man’s teeth begin to close… and Snick’s only hope is to out-acrobatic the dessert dragon before he becomes dessert himself.
+
+CHARACTER STATS (for internal use - apply modifiers to all rolls):
+STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)
+
+Assume the player knows nothing. Allow for an organic introduction of information.
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:72 System message added, requesting opening scene...
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:82 Requesting opening scene...
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:93 Opening scene received: You’re inside the belly of a giant, sentient gingerbread man — not the kind you’d find in a cookie jar, but one tall enough to swallow a bakery whole. The walls are warm, cinnamon-scented, and lined with sugary ribs that creak like old floorboards. Above you, a giant jaw is slowly closing — teeth like chocolate-chip molar teeth glinting in the dim, candied light. 
+
+A ticking clock hangs from the ceiling — not your average clock, but a crooked, caramelized pendulum that says “3 MINUTES UNTIL THE RECIPE AWAKENS.” 
+
+And you? You’re Snick Underbough — “Stealth Wizard,” though your stealth just got a lot less stealthy. 
+
+You’re holding a half-eaten cookie — the cursed one — and the moment you took a bite, the gingerbread man’s stomach began to rumble. Not with hunger. With *intent*. 
+
+The dragon? He’s not real — yet. But he’s coming. 
+
+And you’re the only one who can stop him — or become the next batch of cinnamon rolls.
+
+*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. 
+
+Time to move. 
+
+**Roll for DEX to dodge the first jaw snap.**
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  270
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:255 Game saved
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:256 {gameId: '1765201809403', userId: null, gameSetup: Proxy(Object), conversation: Proxy(Array), summaryConversation: Proxy(Array), …}
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:93 Opening scene received: You’re not in the bakery anymore.
+
+You’re inside a giant, sentient gingerbread man’s stomach — warm, sticky, and smelling of cinnamon and existential dread. The walls pulse like dough rising under a hot oven, and the ceiling? That’s the inside of a mouth. Teeth are closing in — big, caramelized, and *very* hungry. A ticking clock glints on a shelf made of chocolate bars, counting down to… well, you’re not sure what. But the air smells like burnt sugar and impending doom.
+
+And the recipe? It’s written in icing on the wall — cursed, glowing, and whispering: *“Mix the madness. Bake the mayhem. Eat the end.”*
+
+You’re Snick Underbough, Stealth Wizard. You’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.
+
+*“BEHOLD! I vanish!”* you yell, dodging a tongue-shaped tentacle. The clock ticks. The teeth close. You’re not dead yet — but you’re not sure for how long.
+
+What do you do?
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  525
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:255 Game saved
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:256 {gameId: '1765201809403', userId: null, gameSetup: Proxy(Object), conversation: Proxy(Array), summaryConversation: Proxy(Array), …}
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  553
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  739
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  767
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  1037
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  1292
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  1304
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  1740
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:206 User and assistant message count:
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:207 3
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  2010
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  2265
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  2277
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  2713
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:255 Game saved
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:256 {gameId: '1765201809403', userId: null, gameSetup: Proxy(Object), conversation: Proxy(Array), summaryConversation: Proxy(Array), …}
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  3257
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  3527
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  3782
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  3794
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  4230
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  5005
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  5010
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  5331
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:206 User and assistant message count:
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:207 4
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:255 Game saved
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:256 {gameId: '1765201809403', userId: null, gameSetup: Proxy(Object), conversation: Proxy(Array), summaryConversation: Proxy(Array), …}
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  5343
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  5779
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  6554
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  6559
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  6880
+VM760 runtime-dom.esm-bundler.js:1632 Total tokens processed by AI:  6884
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:115 Total tokens processed by AI:  7329
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:206 User and assistant message count:
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:207 5
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:255 Game saved
+index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ChatRoom.vue?vue&type=script&lang=js:256 {gameId: '1765201809403', userId: null, gameSetup: Proxy(Object), conversation: Proxy(Array), summaryConversation: Proxy(Array), …}

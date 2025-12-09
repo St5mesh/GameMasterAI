@@ -72,13 +72,14 @@
                 },
 
                 formData: {
-                    gameSystem: '',
-                    characterName: '',
-                    characterClass: '',
-                    characterRace: '',
-                    characterLevel: '',
-                    characterBackground: '',
-                    abilityScores: ''
+                    gameSystem: 'Dungeons and Dragons 5th Edition',
+                    adventureSetting: 'Classic Fantasy',
+                    characterName: 'Snickerdoodle',
+                    characterClass: 'Rogue',
+                    characterRace: 'Halfling',
+                    characterLevel: '3',
+                    characterBackground: 'Former Baker\'s Apprentice / Amateur Acrobat / Aspiring Hero / Walking Liability. Snickerdoodle "Snick" Underbough is a chaotic-good Halfling Rogue who means incredibly well but is also a magnet for accidental chaos. Snick proudly calls himself a "Stealth Wizard" even though he cannot cast a single spell — he just thinks "stealth" counts as magic. He often shouts "BEHOLD! I vanish!" before attempting to hide, instantly ruining the attempt.',
+                    abilityScores: '8 17 14 10 12 15'
                 }
             };
         },

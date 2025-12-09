@@ -43,7 +43,7 @@
                 summaryConversation: [], // Array to hold all summary conversation data
                 summary: "", // Holds the summary of the game session
                 systemMessageContentDM: "", //Holds the prompt for the AI DM
-                ContextLength: 3, // The number of most recent messages to consider for generating a response
+                ContextLength: 8, // Increased for better context retention in D&D sessions
                 userAndAssistantMessageCount: 0, // initialize the counter here
                 totalTokenCount: 0,
                 errorMessage: null // add error message data property
@@ -203,8 +203,12 @@
                     try {
                         this.errorMessage = null; // Clear the error message
 
-                        // Prepare an array of last ContextLength number of messages
-                        const lastMessages = this.conversation.slice(-this.ContextLength * 2);
+                        // Always include system message + recent messages for consistent rule following
+                        const systemMessage = this.conversation.find(msg => msg.role === 'system');
+                        const recentMessages = this.conversation.slice(-this.ContextLength * 2);
+                        const lastMessages = systemMessage 
+                            ? [systemMessage, ...recentMessages.filter(msg => msg.role !== 'system')]
+                            : recentMessages;
 
                         // Increment token count based on the messages read by the AI 
                         lastMessages.forEach(message => {

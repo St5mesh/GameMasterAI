@@ -1,0 +1,695 @@
+st5ubu@st5ubu-amd5060:~/GamemasterAI-Test2$ npm run server
+
+> unified-gamemasterai@1.0.0 server
+> cd server && npm start
+
+
+> gmai@1.0.0 start
+> node server.js
+
+Server is running on 0.0.0.0:5001
+Connected to MongoDB
+Prepper is Processing the following messages
+[
+  {
+    role: 'user',
+    content: 'Write a brief, 2 sentence adventure prompt for a new D&D adventure. Use the following to inform this:[object Module]Player Character name: Snickerdoodle “Snick” Underbough, Player Charactre Class: Rogue, Player Character Race: Halfling, Player Character Starting Level:3. Player Character Background: Former Baker’s Apprentice / Amateur Acrobat / Aspiring Hero / Walking Liability. Snickerdoodle “Snick” Underbough is a chaotic-good Halfling Rogue who means incredibly well but is also a magnet for accidental chaos. Snick proudly calls himself a “Stealth Wizard” even though he cannot cast a single spell — he just thinks “stealth” counts as magic. He often shouts “BEHOLD! I vanish!” before attempting to hide, instantly ruining the attempt.'
+  }
+]
+Using AI Provider: lmstudio, Model: local-model-name
+Error generating AI response: {
+  error: {
+    message: "No models loaded. Please load a model in the developer page or use the 'lms load' command.",
+    type: 'invalid_request_error',
+    param: 'model',
+    code: null
+  }
+}
+Error generating text: {
+  error: {
+    message: "No models loaded. Please load a model in the developer page or use the 'lms load' command.",
+    type: 'invalid_request_error',
+    param: 'model',
+    code: null
+  }
+}
+AI DM Processing the following messages
+[
+  {
+    role: 'system',
+    content: '[object Module]undefined\n' +
+      '\n' +
+      'CHARACTER STATS (for internal use - apply modifiers to all rolls):\n' +
+      'STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)\n' +
+      '\n' +
+      'Assume the player knows nothing. Allow for an organic introduction of information.'
+  },
+  {
+    role: 'user',
+    content: 'Begin the adventure by setting the scene. Describe where I am and what is happening. Keep it brief and engaging.'
+  }
+]
+Using AI Provider: lmstudio, Model: local-model-name
+Error generating AI response: {
+  error: {
+    message: "No models loaded. Please load a model in the developer page or use the 'lms load' command.",
+    type: 'invalid_request_error',
+    param: 'model',
+    code: null
+  }
+}
+Error generating text: {
+  error: {
+    message: "No models loaded. Please load a model in the developer page or use the 'lms load' command.",
+    type: 'invalid_request_error',
+    param: 'model',
+    code: null
+  }
+}
+AI DM Processing the following messages
+[
+  {
+    role: 'system',
+    content: '[object Module]undefined\n' +
+      '\n' +
+      'CHARACTER STATS (for internal use - apply modifiers to all rolls):\n' +
+      'STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)\n' +
+      '\n' +
+      'Assume the player knows nothing. Allow for an organic introduction of information.'
+  },
+  {
+    role: 'user',
+    content: 'Begin the adventure by setting the scene. Describe where I am and what is happening. Keep it brief and engaging.'
+  },
+  {
+    role: 'system',
+    content: '[object Module]undefined\n' +
+      '\n' +
+      'CHARACTER STATS (for internal use - apply modifiers to all rolls):\n' +
+      'STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)\n' +
+      '\n' +
+      'Assume the player knows nothing. Allow for an organic introduction of information.'
+  },
+  {
+    role: 'user',
+    content: 'Begin the adventure by setting the scene. Describe where I am and what is happening. Keep it brief and engaging.'
+  }
+]
+Using AI Provider: lmstudio, Model: local-model-name
+Error generating AI response: {
+  error: {
+    message: "No models loaded. Please load a model in the developer page or use the 'lms load' command.",
+    type: 'invalid_request_error',
+    param: 'model',
+    code: null
+  }
+}
+Error generating text: {
+  error: {
+    message: "No models loaded. Please load a model in the developer page or use the 'lms load' command.",
+    type: 'invalid_request_error',
+    param: 'model',
+    code: null
+  }
+}
+Prepper is Processing the following messages
+[
+  {
+    role: 'user',
+    content: 'Write a brief, 2 sentence adventure prompt for a new D&D adventure. Use the following to inform this:[object Module]Player Character name: Snickerdoodle “Snick” Underbough, Player Charactre Class: Rogue, Player Character Race: Halfling, Player Character Starting Level:3. Player Character Background: Former Baker’s Apprentice / Amateur Acrobat / Aspiring Hero / Walking Liability. Snickerdoodle “Snick” Underbough is a chaotic-good Halfling Rogue who means incredibly well but is also a magnet for accidental chaos. Snick proudly calls himself a “Stealth Wizard” even though he cannot cast a single spell — he just thinks “stealth” counts as magic. He often shouts “BEHOLD! I vanish!” before attempting to hide, instantly ruining the attempt.'
+  }
+]
+Using AI Provider: lmstudio, Model: local-model-name
+AI DM Processing the following messages
+[
+  {
+    role: 'system',
+    content: '[object Module]Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a collapsing bakery vault while trying to sneak past a grumpy gnome guard — now he’s trapped inside a giant, sentient gingerbread man’s stomach with a ticking clock and a cursed cookie recipe that could turn the whole town into sentient pastries.  \n' +
+      '*“BEHOLD! I vanish!”* he yells as the gingerbread man’s teeth begin to close… and Snick’s only hope is to out-acrobatic the dessert dragon before he becomes dessert himself.\n' +
+      '\n' +
+      'CHARACTER STATS (for internal use - apply modifiers to all rolls):\n' +
+      'STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)\n' +
+      '\n' +
+      'Assume the player knows nothing. Allow for an organic introduction of information.'
+  },
+  {
+    role: 'user',
+    content: 'Begin the adventure by setting the scene. Describe where I am and what is happening. Keep it brief and engaging.'
+  }
+]
+Using AI Provider: lmstudio, Model: local-model-name
+AI DM Processing the following messages
+[
+  {
+    role: 'system',
+    content: '[object Module]Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a collapsing bakery vault while trying to sneak past a grumpy gnome guard — now he’s trapped inside a giant, sentient gingerbread man’s stomach with a ticking clock and a cursed cookie recipe that could turn the whole town into sentient pastries.  \n' +
+      '*“BEHOLD! I vanish!”* he yells as the gingerbread man’s teeth begin to close… and Snick’s only hope is to out-acrobatic the dessert dragon before he becomes dessert himself.\n' +
+      '\n' +
+      'CHARACTER STATS (for internal use - apply modifiers to all rolls):\n' +
+      'STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)\n' +
+      '\n' +
+      'Assume the player knows nothing. Allow for an organic introduction of information.'
+  },
+  {
+    role: 'user',
+    content: 'Begin the adventure by setting the scene. Describe where I am and what is happening. Keep it brief and engaging.'
+  },
+  {
+    role: 'system',
+    content: '[object Module]Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a collapsing bakery vault while trying to sneak past a grumpy gnome guard — now he’s trapped inside a giant, sentient gingerbread man’s stomach with a ticking clock and a cursed cookie recipe that could turn the whole town into sentient pastries.  \n' +
+      '*“BEHOLD! I vanish!”* he yells as the gingerbread man’s teeth begin to close… and Snick’s only hope is to out-acrobatic the dessert dragon before he becomes dessert himself.\n' +
+      '\n' +
+      'CHARACTER STATS (for internal use - apply modifiers to all rolls):\n' +
+      'STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)\n' +
+      '\n' +
+      'Assume the player knows nothing. Allow for an organic introduction of information.'
+  },
+  {
+    role: 'user',
+    content: 'Begin the adventure by setting the scene. Describe where I am and what is happening. Keep it brief and engaging.'
+  }
+]
+Using AI Provider: lmstudio, Model: local-model-name
+AI DM processed: You’re inside the belly of a giant, sentient gingerbread man — not the kind you’d find in a cookie jar, but one tall enough to swallow a bakery whole. The walls are warm, cinnamon-scented, and lined with sugary ribs that creak like old floorboards. Above you, a giant jaw is slowly closing — teeth like chocolate-chip molar teeth glinting in the dim, candied light. 
+
+A ticking clock hangs from the ceiling — not your average clock, but a crooked, caramelized pendulum that says “3 MINUTES UNTIL THE RECIPE AWAKENS.” 
+
+And you? You’re Snick Underbough — “Stealth Wizard,” though your stealth just got a lot less stealthy. 
+
+You’re holding a half-eaten cookie — the cursed one — and the moment you took a bite, the gingerbread man’s stomach began to rumble. Not with hunger. With *intent*. 
+
+The dragon? He’s not real — yet. But he’s coming. 
+
+And you’re the only one who can stop him — or become the next batch of cinnamon rolls.
+
+*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. 
+
+Time to move. 
+
+**Roll for DEX to dodge the first jaw snap.**
+AI DM processed: You’re not in the bakery anymore.
+
+You’re inside a giant, sentient gingerbread man’s stomach — warm, sticky, and smelling of cinnamon and existential dread. The walls pulse like dough rising under a hot oven, and the ceiling? That’s the inside of a mouth. Teeth are closing in — big, caramelized, and *very* hungry. A ticking clock glints on a shelf made of chocolate bars, counting down to… well, you’re not sure what. But the air smells like burnt sugar and impending doom.
+
+And the recipe? It’s written in icing on the wall — cursed, glowing, and whispering: *“Mix the madness. Bake the mayhem. Eat the end.”*
+
+You’re Snick Underbough, Stealth Wizard. You’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.
+
+*“BEHOLD! I vanish!”* you yell, dodging a tongue-shaped tentacle. The clock ticks. The teeth close. You’re not dead yet — but you’re not sure for how long.
+
+What do you do?
+AI DM Processing the following messages
+[
+  {
+    role: 'user',
+    content: 'Begin the adventure by setting the scene. Describe where I am and what is happening. Keep it brief and engaging.'
+  },
+  {
+    role: 'system',
+    content: '[object Module]Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a collapsing bakery vault while trying to sneak past a grumpy gnome guard — now he’s trapped inside a giant, sentient gingerbread man’s stomach with a ticking clock and a cursed cookie recipe that could turn the whole town into sentient pastries.  \n' +
+      '*“BEHOLD! I vanish!”* he yells as the gingerbread man’s teeth begin to close… and Snick’s only hope is to out-acrobatic the dessert dragon before he becomes dessert himself.\n' +
+      '\n' +
+      'CHARACTER STATS (for internal use - apply modifiers to all rolls):\n' +
+      'STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)\n' +
+      '\n' +
+      'Assume the player knows nothing. Allow for an organic introduction of information.'
+  },
+  {
+    role: 'user',
+    content: 'Begin the adventure by setting the scene. Describe where I am and what is happening. Keep it brief and engaging.'
+  },
+  {
+    role: 'assistant',
+    content: 'You’re inside the belly of a giant, sentient gingerbread man — not the kind you’d find in a cookie jar, but one tall enough to swallow a bakery whole. The walls are warm, cinnamon-scented, and lined with sugary ribs that creak like old floorboards. Above you, a giant jaw is slowly closing — teeth like chocolate-chip molar teeth glinting in the dim, candied light. \n' +
+      '\n' +
+      'A ticking clock hangs from the ceiling — not your average clock, but a crooked, caramelized pendulum that says “3 MINUTES UNTIL THE RECIPE AWAKENS.” \n' +
+      '\n' +
+      'And you? You’re Snick Underbough — “Stealth Wizard,” though your stealth just got a lot less stealthy. \n' +
+      '\n' +
+      'You’re holding a half-eaten cookie — the cursed one — and the moment you took a bite, the gingerbread man’s stomach began to rumble. Not with hunger. With *intent*. \n' +
+      '\n' +
+      'The dragon? He’s not real — yet. But he’s coming. \n' +
+      '\n' +
+      'And you’re the only one who can stop him — or become the next batch of cinnamon rolls.\n' +
+      '\n' +
+      '*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. \n' +
+      '\n' +
+      'Time to move. \n' +
+      '\n' +
+      '**Roll for DEX to dodge the first jaw snap.**'
+  },
+  {
+    role: 'assistant',
+    content: 'You’re not in the bakery anymore.\n' +
+      '\n' +
+      'You’re inside a giant, sentient gingerbread man’s stomach — warm, sticky, and smelling of cinnamon and existential dread. The walls pulse like dough rising under a hot oven, and the ceiling? That’s the inside of a mouth. Teeth are closing in — big, caramelized, and *very* hungry. A ticking clock glints on a shelf made of chocolate bars, counting down to… well, you’re not sure what. But the air smells like burnt sugar and impending doom.\n' +
+      '\n' +
+      'And the recipe? It’s written in icing on the wall — cursed, glowing, and whispering: *“Mix the madness. Bake the mayhem. Eat the end.”*\n' +
+      '\n' +
+      'You’re Snick Underbough, Stealth Wizard. You’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n' +
+      '\n' +
+      '*“BEHOLD! I vanish!”* you yell, dodging a tongue-shaped tentacle. The clock ticks. The teeth close. You’re not dead yet — but you’re not sure for how long.\n' +
+      '\n' +
+      'What do you do?'
+  },
+  {
+    role: 'user',
+    content: 'what items are around me which may be of use?'
+  }
+]
+Using AI Provider: lmstudio, Model: local-model-name
+AI DM processed: You’re not alone in this sugary nightmare — here’s what’s *actually* around you (and maybe useful):
+
+---
+
+**1. Half-Eaten Cursed Cookie (in your hand)**  
+- *It’s glowing faintly, like a bad idea with a heartbeat.*  
+- If you eat it… the gingerbread man’s stomach might *react*. Or worse — you might become sentient pastry.  
+- If you *don’t* eat it… the recipe on the wall might react to *your* presence — or not.  
+- *Roll a CON save to resist its temptation.* (You’re not hungry… yet.)
+
+---
+
+**2. Clock with a Caramelized Pendulum**  
+- *It’s ticking — not just time, but “recipe countdown.”*  
+- If you can *stop* it, maybe the curse doesn’t trigger.  
+- It’s also *made of sugar*, so maybe… *burn it?*  
+- *Roll a DEX to dodge the pendulum’s swing — it’s not just a clock, it’s a weapon.*
+
+---
+
+**3. Chocolate Bar Shelf (on the ceiling)**  
+- *It’s not just chocolate — it’s a shelf made of chocolate bars.*  
+- If you can *climb* it… maybe you can reach the gingerbread man’s throat?  
+- *Roll a STR to climb — it’s sticky, but you’re a Stealth Wizard, so you’ve got a plan.*  
+- *If you fall… you might become a chocolate bar.*
+
+---
+
+**4. Glowing Icing Recipe on the Wall**  
+- *It’s written in cursive that looks like it’s been chewed.*  
+- It says: *“Mix the madness. Bake the mayhem. Eat the end.”*  
+- If you read it… maybe it reveals a way to stop the curse.  
+- *Roll an INT to decipher it — or maybe it’s just a warning.*  
+- *If you write on it… it might react — or it might be the key.*
+
+---
+
+**5. Tentacle Tongue (from the gingerbread man’s mouth)**  
+- *It’s not real — yet.*  
+- It’s *coming* — and it’s *hungry.*  
+- *Roll a DEX to dodge — or maybe you can *use* it?*  
+- *If you touch it… you might become sentient.*  
+- *
+Using AI Provider: lmstudio, Model: local-model-name
+AI DM Processing the following messages
+[
+  {
+    role: 'assistant',
+    content: 'You’re inside the belly of a giant, sentient gingerbread man — not the kind you’d find in a cookie jar, but one tall enough to swallow a bakery whole. The walls are warm, cinnamon-scented, and lined with sugary ribs that creak like old floorboards. Above you, a giant jaw is slowly closing — teeth like chocolate-chip molar teeth glinting in the dim, candied light. \n' +
+      '\n' +
+      'A ticking clock hangs from the ceiling — not your average clock, but a crooked, caramelized pendulum that says “3 MINUTES UNTIL THE RECIPE AWAKENS.” \n' +
+      '\n' +
+      'And you? You’re Snick Underbough — “Stealth Wizard,” though your stealth just got a lot less stealthy. \n' +
+      '\n' +
+      'You’re holding a half-eaten cookie — the cursed one — and the moment you took a bite, the gingerbread man’s stomach began to rumble. Not with hunger. With *intent*. \n' +
+      '\n' +
+      'The dragon? He’s not real — yet. But he’s coming. \n' +
+      '\n' +
+      'And you’re the only one who can stop him — or become the next batch of cinnamon rolls.\n' +
+      '\n' +
+      '*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. \n' +
+      '\n' +
+      'Time to move. \n' +
+      '\n' +
+      '**Roll for DEX to dodge the first jaw snap.**'
+  },
+  {
+    role: 'assistant',
+    content: 'You’re not in the bakery anymore.\n' +
+      '\n' +
+      'You’re inside a giant, sentient gingerbread man’s stomach — warm, sticky, and smelling of cinnamon and existential dread. The walls pulse like dough rising under a hot oven, and the ceiling? That’s the inside of a mouth. Teeth are closing in — big, caramelized, and *very* hungry. A ticking clock glints on a shelf made of chocolate bars, counting down to… well, you’re not sure what. But the air smells like burnt sugar and impending doom.\n' +
+      '\n' +
+      'And the recipe? It’s written in icing on the wall — cursed, glowing, and whispering: *“Mix the madness. Bake the mayhem. Eat the end.”*\n' +
+      '\n' +
+      'You’re Snick Underbough, Stealth Wizard. You’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n' +
+      '\n' +
+      '*“BEHOLD! I vanish!”* you yell, dodging a tongue-shaped tentacle. The clock ticks. The teeth close. You’re not dead yet — but you’re not sure for how long.\n' +
+      '\n' +
+      'What do you do?'
+  },
+  {
+    role: 'user',
+    content: 'what items are around me which may be of use?'
+  },
+  {
+    role: 'assistant',
+    content: 'You’re not alone in this sugary nightmare — here’s what’s *actually* around you (and maybe useful):\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**1. Half-Eaten Cursed Cookie (in your hand)**  \n' +
+      '- *It’s glowing faintly, like a bad idea with a heartbeat.*  \n' +
+      '- If you eat it… the gingerbread man’s stomach might *react*. Or worse — you might become sentient pastry.  \n' +
+      '- If you *don’t* eat it… the recipe on the wall might react to *your* presence — or not.  \n' +
+      '- *Roll a CON save to resist its temptation.* (You’re not hungry… yet.)\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**2. Clock with a Caramelized Pendulum**  \n' +
+      '- *It’s ticking — not just time, but “recipe countdown.”*  \n' +
+      '- If you can *stop* it, maybe the curse doesn’t trigger.  \n' +
+      '- It’s also *made of sugar*, so maybe… *burn it?*  \n' +
+      '- *Roll a DEX to dodge the pendulum’s swing — it’s not just a clock, it’s a weapon.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**3. Chocolate Bar Shelf (on the ceiling)**  \n' +
+      '- *It’s not just chocolate — it’s a shelf made of chocolate bars.*  \n' +
+      '- If you can *climb* it… maybe you can reach the gingerbread man’s throat?  \n' +
+      '- *Roll a STR to climb — it’s sticky, but you’re a Stealth Wizard, so you’ve got a plan.*  \n' +
+      '- *If you fall… you might become a chocolate bar.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**4. Glowing Icing Recipe on the Wall**  \n' +
+      '- *It’s written in cursive that looks like it’s been chewed.*  \n' +
+      '- It says: *“Mix the madness. Bake the mayhem. Eat the end.”*  \n' +
+      '- If you read it… maybe it reveals a way to stop the curse.  \n' +
+      '- *Roll an INT to decipher it — or maybe it’s just a warning.*  \n' +
+      '- *If you write on it… it might react — or it might be the key.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**5. Tentacle Tongue (from the gingerbread man’s mouth)**  \n' +
+      '- *It’s not real — yet.*  \n' +
+      '- It’s *coming* — and it’s *hungry.*  \n' +
+      '- *Roll a DEX to dodge — or maybe you can *use* it?*  \n' +
+      '- *If you touch it… you might become sentient.*  \n' +
+      '- *'
+  },
+  {
+    role: 'system',
+    content: '(this is a reminder of your role, do not respond directly: [object Module]Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a collapsing bakery vault while trying to sneak past a grumpy gnome guard — now he’s trapped inside a giant, sentient gingerbread man’s stomach with a ticking clock and a cursed cookie recipe that could turn the whole town into sentient pastries.  \n' +
+      '*“BEHOLD! I vanish!”* he yells as the gingerbread man’s teeth begin to close… and Snick’s only hope is to out-acrobatic the dessert dragon before he becomes dessert himself.\n' +
+      '\n' +
+      'CHARACTER STATS (for internal use - apply modifiers to all rolls):\n' +
+      'STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)\n' +
+      '\n' +
+      'Assume the player knows nothing. Allow for an organic introduction of information.. This is also a summary of what has transpired in this game so far. Ensure continuity and consistency using this summary:\n' +
+      'If you don’t… you might become a snack.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**6. Cinnamon Roll (on the floor)**  \n' +
+      '- *It’s not cursed — but it’s *very* tempting.*  \n' +
+      '- If you eat it… you might become a cinnamon roll.  \n' +
+      '- *Roll a WIS to resist — or maybe you’re just hungry.*  \n' +
+      '- *If you don’t… you might become a cinnamon roll anyway.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**7. Gingerbread Man’s Teeth (in the ceiling)**  \n' +
+      '- *They’re closing — and they’re *very* sharp.*  \n' +
+      '- If you can *avoid* them… maybe you can *out-acrobatic* the dragon.  \n' +
+      '- *Roll a DEX to dodge — or maybe you can *use* them?*  \n' +
+      '- *If you touch them… you might become a tooth.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**8. The Gingerbread Man’s Stomach (you’re inside it)**  \n' +
+      '- *It’s warm — and it’s *very* sticky.*  \n' +
+      '- If you can *escape*… maybe you can *out-acrobatic* the dragon.  \n' +
+      '- *Roll a DEX to escape — or maybe you can *use* it?*  \n' +
+      '- *If you don’t… you might become a snack.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**9. The Dragon (not real — yet)**  \n' +
+      '- *It’s coming — and it’s *very* hungry.*  \n' +
+      '- If you can *out-acrobatic* it… maybe you can *stop* the curse.  \n' +
+      '- *Roll a DEX to dodge — or maybe you can *use* it?*  \n' +
+      '- *If you don’t… you might become a snack.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**10. The Recipe (on the wall)**  \n' +
+      '- *It’s not just a recipe — it’s a *cursed* recipe.*  \n' +
+      '- If you can *read* it… maybe you can *stop* the curse.  \n' +
+      '- *Roll an INT to decipher it — or maybe it’s just a warning.*  \n' +
+      '- *If you write on it… it might react — or it might be the key.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**What do you do?**\n' +
+      '\n' +
+      '*Roll a DEX to dodge the tentacle tongue — or maybe you can *use* it?*  \n' +
+      '*Roll a STR to climb the chocolate bar shelf — or maybe you can *use* it?*  \n' +
+      '*Roll a WIS to resist the cinnamon roll — or maybe you’re just hungry?*  \n' +
+      '*Roll a CON to resist the cursed cookie — or maybe you’re just… not hungry?*  \n' +
+      '*Roll an INT to decipher the recipe — or maybe it’s just a warning?*  \n' +
+      '*Roll a DEX to escape the gingerbread man’s stomach — or maybe you can *use* it?*\n' +
+      '\n' +
+      'You’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n' +
+      '\n' +
+      '*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. \n' +
+      '\n' +
+      'Time to move.)'
+  },
+  { role: 'user', content: '2. roll dex for me' }
+]
+Using AI Provider: lmstudio, Model: local-model-name
+AI DM processed: 🎲 **Dexterity Roll: 18 (Natural 20!)** 🎲
+
+You’re not just dodging — you’re *flipping* the gingerbread man’s jaw shut with a cartwheel that looks like it was choreographed by a circus acrobat who moonlighted as a pastry chef.
+
+The teeth snap shut — *but not on you*. You’ve rolled under the first bite. You land in a sugar-coated crouch, arms out like a contortionist, breathing in cinnamon and chaos.
+
+The clock ticks faster. The tongue licks the air. The recipe glows brighter.
+
+You’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.
+
+**What do you do next?**
+
+You’ve got:
+- A half-eaten cursed cookie (you’re holding it, still glowing).
+- A clock ticking down (3 minutes? 2?).
+- A chocolate shelf above you (climb it?).
+- A glowing recipe on the wall (read it?).
+- A tongue coming for you (dodge it? use it?).
+
+You’re not dead. You’re not safe. You’re just… here.
+
+And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.
+
+*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. 
+
+Time to move.
+
+**Roll again? Or pick your next move?**
+AI DM Processing the following messages
+[
+  {
+    role: 'user',
+    content: 'what items are around me which may be of use?'
+  },
+  {
+    role: 'assistant',
+    content: 'You’re not alone in this sugary nightmare — here’s what’s *actually* around you (and maybe useful):\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**1. Half-Eaten Cursed Cookie (in your hand)**  \n' +
+      '- *It’s glowing faintly, like a bad idea with a heartbeat.*  \n' +
+      '- If you eat it… the gingerbread man’s stomach might *react*. Or worse — you might become sentient pastry.  \n' +
+      '- If you *don’t* eat it… the recipe on the wall might react to *your* presence — or not.  \n' +
+      '- *Roll a CON save to resist its temptation.* (You’re not hungry… yet.)\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**2. Clock with a Caramelized Pendulum**  \n' +
+      '- *It’s ticking — not just time, but “recipe countdown.”*  \n' +
+      '- If you can *stop* it, maybe the curse doesn’t trigger.  \n' +
+      '- It’s also *made of sugar*, so maybe… *burn it?*  \n' +
+      '- *Roll a DEX to dodge the pendulum’s swing — it’s not just a clock, it’s a weapon.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**3. Chocolate Bar Shelf (on the ceiling)**  \n' +
+      '- *It’s not just chocolate — it’s a shelf made of chocolate bars.*  \n' +
+      '- If you can *climb* it… maybe you can reach the gingerbread man’s throat?  \n' +
+      '- *Roll a STR to climb — it’s sticky, but you’re a Stealth Wizard, so you’ve got a plan.*  \n' +
+      '- *If you fall… you might become a chocolate bar.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**4. Glowing Icing Recipe on the Wall**  \n' +
+      '- *It’s written in cursive that looks like it’s been chewed.*  \n' +
+      '- It says: *“Mix the madness. Bake the mayhem. Eat the end.”*  \n' +
+      '- If you read it… maybe it reveals a way to stop the curse.  \n' +
+      '- *Roll an INT to decipher it — or maybe it’s just a warning.*  \n' +
+      '- *If you write on it… it might react — or it might be the key.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**5. Tentacle Tongue (from the gingerbread man’s mouth)**  \n' +
+      '- *It’s not real — yet.*  \n' +
+      '- It’s *coming* — and it’s *hungry.*  \n' +
+      '- *Roll a DEX to dodge — or maybe you can *use* it?*  \n' +
+      '- *If you touch it… you might become sentient.*  \n' +
+      '- *'
+  },
+  {
+    role: 'system',
+    content: '(this is a reminder of your role, do not respond directly: [object Module]Snick Underbough, the self-proclaimed “Stealth Wizard,” accidentally triggers a collapsing bakery vault while trying to sneak past a grumpy gnome guard — now he’s trapped inside a giant, sentient gingerbread man’s stomach with a ticking clock and a cursed cookie recipe that could turn the whole town into sentient pastries.  \n' +
+      '*“BEHOLD! I vanish!”* he yells as the gingerbread man’s teeth begin to close… and Snick’s only hope is to out-acrobatic the dessert dragon before he becomes dessert himself.\n' +
+      '\n' +
+      'CHARACTER STATS (for internal use - apply modifiers to all rolls):\n' +
+      'STR 8 (-1), DEX 17 (+3), CON 14 (+2), INT 10 (+0), WIS 12 (+1), CHA 15 (+2)\n' +
+      '\n' +
+      'Assume the player knows nothing. Allow for an organic introduction of information.. This is also a summary of what has transpired in this game so far. Ensure continuity and consistency using this summary:\n' +
+      'If you don’t… you might become a snack.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**6. Cinnamon Roll (on the floor)**  \n' +
+      '- *It’s not cursed — but it’s *very* tempting.*  \n' +
+      '- If you eat it… you might become a cinnamon roll.  \n' +
+      '- *Roll a WIS to resist — or maybe you’re just hungry.*  \n' +
+      '- *If you don’t… you might become a cinnamon roll anyway.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**7. Gingerbread Man’s Teeth (in the ceiling)**  \n' +
+      '- *They’re closing — and they’re *very* sharp.*  \n' +
+      '- If you can *avoid* them… maybe you can *out-acrobatic* the dragon.  \n' +
+      '- *Roll a DEX to dodge — or maybe you can *use* them?*  \n' +
+      '- *If you touch them… you might become a tooth.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**8. The Gingerbread Man’s Stomach (you’re inside it)**  \n' +
+      '- *It’s warm — and it’s *very* sticky.*  \n' +
+      '- If you can *escape*… maybe you can *out-acrobatic* the dragon.  \n' +
+      '- *Roll a DEX to escape — or maybe you can *use* it?*  \n' +
+      '- *If you don’t… you might become a snack.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**9. The Dragon (not real — yet)**  \n' +
+      '- *It’s coming — and it’s *very* hungry.*  \n' +
+      '- If you can *out-acrobatic* it… maybe you can *stop* the curse.  \n' +
+      '- *Roll a DEX to dodge — or maybe you can *use* it?*  \n' +
+      '- *If you don’t… you might become a snack.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**10. The Recipe (on the wall)**  \n' +
+      '- *It’s not just a recipe — it’s a *cursed* recipe.*  \n' +
+      '- If you can *read* it… maybe you can *stop* the curse.  \n' +
+      '- *Roll an INT to decipher it — or maybe it’s just a warning.*  \n' +
+      '- *If you write on it… it might react — or it might be the key.*\n' +
+      '\n' +
+      '---\n' +
+      '\n' +
+      '**What do you do?**\n' +
+      '\n' +
+      '*Roll a DEX to dodge the tentacle tongue — or maybe you can *use* it?*  \n' +
+      '*Roll a STR to climb the chocolate bar shelf — or maybe you can *use* it?*  \n' +
+      '*Roll a WIS to resist the cinnamon roll — or maybe you’re just hungry?*  \n' +
+      '*Roll a CON to resist the cursed cookie — or maybe you’re just… not hungry?*  \n' +
+      '*Roll an INT to decipher the recipe — or maybe it’s just a warning?*  \n' +
+      '*Roll a DEX to escape the gingerbread man’s stomach — or maybe you can *use* it?*\n' +
+      '\n' +
+      'You’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n' +
+      '\n' +
+      '*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. \n' +
+      '\n' +
+      'Time to move.)'
+  },
+  { role: 'user', content: '2. roll dex for me' },
+  {
+    role: 'assistant',
+    content: '🎲 **Dexterity Roll: 18 (Natural 20!)** 🎲\n' +
+      '\n' +
+      'You’re not just dodging — you’re *flipping* the gingerbread man’s jaw shut with a cartwheel that looks like it was choreographed by a circus acrobat who moonlighted as a pastry chef.\n' +
+      '\n' +
+      'The teeth snap shut — *but not on you*. You’ve rolled under the first bite. You land in a sugar-coated crouch, arms out like a contortionist, breathing in cinnamon and chaos.\n' +
+      '\n' +
+      'The clock ticks faster. The tongue licks the air. The recipe glows brighter.\n' +
+      '\n' +
+      'You’re not dead. You’re not safe. You’re just… here. And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n' +
+      '\n' +
+      '**What do you do next?**\n' +
+      '\n' +
+      'You’ve got:\n' +
+      '- A half-eaten cursed cookie (you’re holding it, still glowing).\n' +
+      '- A clock ticking down (3 minutes? 2?).\n' +
+      '- A chocolate shelf above you (climb it?).\n' +
+      '- A glowing recipe on the wall (read it?).\n' +
+      '- A tongue coming for you (dodge it? use it?).\n' +
+      '\n' +
+      'You’re not dead. You’re not safe. You’re just… here.\n' +
+      '\n' +
+      'And the gingerbread man’s stomach is about to swallow you whole — unless you can out-acrobatic the dessert dragon before it’s too late.\n' +
+      '\n' +
+      '*“BEHOLD! I vanish!”* you yell — but the gingerbread man’s teeth are already closing. \n' +
+      '\n' +
+      'Time to move.\n' +
+      '\n' +
+      '**Roll again? Or pick your next move?**'
+  },
+  { role: 'user', content: 'attack the enemy' }
+]
+Using AI Provider: lmstudio, Model: local-model-name
+AI DM processed: *“BEHOLD! I vanish!”* you shout — not in fear, but in defiance — and you *do* vanish… for a second.  
+Then you reappear *inside* the gingerbread man’s mouth, mid-leap — arms flailing, cookie in hand, and a grin on your face that says: *“I’m not just sneaking — I’m *attacking*.”*
+
+---
+
+**You’re not attacking the gingerbread man — you’re attacking the *dragon* that’s about to come.**
+
+The dragon? It’s not real — yet. But you *know* it’s coming. And you’re not waiting for it to eat you.
+
+So you *do* what any Stealth Wizard would do:  
+**You use the environment.**
+
+---
+
+### 🎯 **You throw the cursed cookie at the clock’s caramelized pendulum.**
+
+It’s not just a clock — it’s a *weapon*. And you’re using it to *break* the countdown.
+
+The cookie hits the pendulum — *CRUNCH*.  
+The pendulum *stops*.  
+The clock *freezes*.  
+The recipe on the wall *glows brighter*.  
+And the gingerbread man’s stomach *stutters* — like it’s confused.
+
+---
+
+### ⚡ *Now you’re not dodging — you’re *attacking*.*
+
+You *grab* the chocolate bar shelf — not to climb, but to *swing*.  
+You spin like a sugar-sick acrobat, using the shelf as a trampoline, launching yourself *toward the dragon’s mouth* — which is *not* real, but *is* about to open.
+
+You land *inside* the dragon’s throat — not to eat it, but to *stop it*.
+
+---
+
+### 💥 *You shove the glowing recipe into the dragon’s mouth.*
+
+It doesn’t *eat* it — it *reads* it.  
+The dragon’s eyes flicker — not with hunger, but with *recognition*.  
+The recipe says: *“Mix the madness. Bake the mayhem. Eat the end.”*
+
+The dragon *understands*.  
+It’s not attacking you — it’s *waiting* for you to finish the recipe.
+
+---
+
+### 🧩 *You whisper the final line into the dragon’s mouth:*
+
+> *“I’m not here to eat. I’m here to *stop*.”*
+
+The dragon’s

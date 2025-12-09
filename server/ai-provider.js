@@ -60,7 +60,8 @@ async function generateAIResponse(messages, options = {}) {
         model: model,
         messages: messages,
         max_tokens: max_tokens,
-        temperature: temperature
+        temperature: temperature,
+        stop: ["\n\nPlayer:", "What do you do?", "\n\n---", "What would you like to do?"]  // Force AI to stop at natural DM pauses
     };
     
     const headers = {
@@ -104,8 +105,8 @@ async function generateAIResponse(messages, options = {}) {
 async function generateDMResponse(messages) {
     return generateAIResponse(messages, {
         modelType: 'dm',
-        max_tokens: 500,  // Reduced for concise, player-focused responses
-        temperature: 0.8
+        max_tokens: 200,  // Enforces ~150 word limit for concise DM responses
+        temperature: 0.6   // More controlled, less random for structured gameplay
     });
 }
 
@@ -115,8 +116,8 @@ async function generateDMResponse(messages) {
 async function generateCampaign(messages) {
     return generateAIResponse(messages, {
         modelType: 'campaign',
-        max_tokens: 1500,
-        temperature: 0.8
+        max_tokens: 100,   // Brief 2-sentence adventure prompt
+        temperature: 0.7   // Slightly more creative for campaign setup
     });
 }
 
@@ -126,8 +127,8 @@ async function generateCampaign(messages) {
 async function generateSummary(messages) {
     return generateAIResponse(messages, {
         modelType: 'summary',
-        max_tokens: 800,
-        temperature: 0.8
+        max_tokens: 300,   // Concise summary format
+        temperature: 0.5   // More factual, less creative for summaries
     });
 }
 
